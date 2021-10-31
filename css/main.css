@@ -1,0 +1,200 @@
+/* Body styling - logo from freeiconspng.com */
+:root {
+    
+    --blue: rgb(13,110,253);
+    --grey: rgb(240,242,245);   
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body { 
+    background-color :var(--grey);
+    font-family: 'Sora', sans-serif;
+    background-size: cover;
+    border-radius: 1rem;
+    color: var(--blue);
+    
+}
+/* nav */
+
+
+.login-link {
+    
+    height:100%;
+    display:block;
+}
+
+.login-title { 
+
+    color: rgb(13,110,253);
+    text-decoration: none;
+    font-size: 2rem;
+    height:100%;
+}
+
+.title-col { 
+    justify-content: center;
+    text-align: center;
+    vertical-align: middle;
+    margin:auto;
+}
+
+
+.title-row {
+
+    margin-top: 4%;
+    margin-right: 0px;
+    margin-left: 0px;
+    vertical-align: middle;
+    display:flex;
+}
+
+.logo-pic {
+
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.nav {
+    padding-right:0;
+    height: auto;
+}
+
+/* Get rid of text underline for login logo link */
+
+a:link { text-decoration: none; }
+
+
+a:visited { text-decoration: none; }
+
+
+a:hover { text-decoration: none; }
+
+
+a:active { text-decoration: none; }
+
+/* main */
+
+
+.login { 
+    margin-top:4%;
+    width:30%;
+    background-color:white;
+    border-radius:1rem;
+    
+}
+
+/* form login */
+
+#login-form {
+
+    margin-top:3%;
+    margin-bottom:3%;
+}
+
+
+.main-col {
+
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+}
+
+.form-control {
+
+    margin-top: 3%;
+
+}
+
+.form-submit {
+
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    
+    
+}
+
+.form-group { 
+
+    margin-top: 3%; margin-bottom: 3%;
+    height: 52px;
+}
+
+.submit-login {
+
+    width:100%;
+    height: 38px;
+    background: rgb(25,119,242);
+    border-color: none;
+    border-style: none;
+    border-radius: 0.2rem;
+    color: white;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    outline:none;
+
+}
+
+.line {
+
+    margin-top: 8%;
+}
+
+
+.horizontal-line {
+
+    border-top: 2px solid grey;
+    
+}
+
+.register-button {
+
+    margin-top: 5%;
+}
+
+button:hover {
+    background: #4267b2;
+}
+
+
+/* footer */
+
+.footer-col {
+
+    justify-content: center;
+    text-align:center;
+    bottom: 0;
+    position: fixed;
+}
+
+
+input:-webkit-autofill::first-line {
+
+    font-family: 'Sora', sans-serif;
+
+}
+
+
+
+/* media queries */
+
+@media (min-width: 0px) and (max-width: 600px) {
+
+
+    .login { 
+        margin-top:3%;
+        width:70%;
+        background-color:white;
+        border-radius:1rem;
+        
+    }
+
+
+}
+
+

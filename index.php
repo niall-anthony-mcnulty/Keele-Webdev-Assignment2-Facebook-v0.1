@@ -14,7 +14,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">  
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="js/main.js"></script>
 </head>
 <body>
     <nav>
@@ -44,7 +43,7 @@
                     <div class='line'>
                         <hr class='horizontal-line' >
                     </div>
-                    <div class="form-submit">
+                    <div class="form-register">
                         <input class='register-button' type="submit" name="register" value="Register">
                     </div>
                 </form>

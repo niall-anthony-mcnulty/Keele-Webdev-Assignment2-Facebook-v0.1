@@ -2,7 +2,8 @@
 :root {
     
     --blue: rgb(13,110,253);
-    --grey: rgb(240,242,245);   
+    --grey: rgb(240,242,245); 
+    --submitblue: rgb(25,119,242);  
 }
 
 html,
@@ -45,7 +46,7 @@ body {
 
 .title-row {
 
-    margin-top: 4%;
+    margin-top: 9%;
     margin-right: 0px;
     margin-left: 0px;
     vertical-align: middle;
@@ -54,13 +55,14 @@ body {
 
 .logo-pic {
 
-    max-width: 200px;
-    max-height: 200px;
+    max-width: 25%;
+    max-height: 25%;
 }
 
 .nav {
     padding-right:0;
     height: auto;
+    margin-top: 2%;
 }
 
 /* Get rid of text underline for login logo link */
@@ -80,18 +82,19 @@ a:active { text-decoration: none; }
 
 
 .login { 
-    margin-top:4%;
+    margin-top:6%;
     width:30%;
     background-color:white;
-    border-radius:1rem;
+    border-radius:6px;
     
 }
+
 
 /* form login */
 
 #login-form {
 
-    margin-top:3%;
+    margin-top:7%;
     margin-bottom:3%;
 }
 
@@ -106,6 +109,8 @@ a:active { text-decoration: none; }
 .form-control {
 
     margin-top: 3%;
+    border-radius: 6px;
+    height: 48px;
 
 }
 
@@ -122,17 +127,18 @@ a:active { text-decoration: none; }
 .form-group { 
 
     margin-top: 3%; margin-bottom: 3%;
-    height: 52px;
+    height: 48px;
+
 }
 
 .submit-login {
 
     width:100%;
-    height: 38px;
-    background: rgb(25,119,242);
+    height: 48px;
+    background-color: var(--submitblue);
     border-color: none;
     border-style: none;
-    border-radius: 0.2rem;
+    border-radius: 6px;
     color: white;
     transition: 0.3s ease-in-out;
     cursor: pointer;
@@ -157,8 +163,18 @@ a:active { text-decoration: none; }
     margin-top: 5%;
 }
 
-button:hover {
-    background: #4267b2;
+.form-register {
+
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+
+}
+
+
+input:hover {
+    background-color: rgb(11, 77, 170) ;
 }
 
 
@@ -183,8 +199,10 @@ input:-webkit-autofill::first-line {
 
 /* media queries */
 
-@media (min-width: 0px) and (max-width: 600px) {
+@media (min-width: 0px) and (max-width: 700px) {
 
+
+ 
 
     .login { 
         margin-top:3%;
@@ -194,7 +212,51 @@ input:-webkit-autofill::first-line {
         
     }
 
+    .nav { 
+
+        margin-top: 15%;
+    }
+
+    .login {
+
+        margin-top: 15%;
+    }
+    
 
 }
 
 
+@media (min-width: 701px) and (max-width: 1024px) {
+
+    .login { 
+        margin-top:15%;
+        width:50%;
+        background-color:white;
+        border-radius:1rem;
+        
+    }
+
+    .nav { 
+
+        margin-top: 10%;
+    }
+  
+ 
+}
+
+
+@media (min-width: 1025px) and (max-width:1600px) {
+
+
+    .login { 
+
+        margin-top: 6%;
+        width: 45%;
+    }
+
+    .title-row {
+
+        margin-top: 3%
+    }
+
+}

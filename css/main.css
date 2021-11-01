@@ -9,6 +9,19 @@
 html,
 body {
   height: 100%;
+  margin:0;
+}
+
+.wrapper {
+
+    min-height:100%;
+    
+}
+
+.content-inside { 
+
+    padding: 20px;
+    padding-bottom: 30px;
 }
 
 body { 
@@ -46,17 +59,17 @@ body {
 
 .title-row {
 
-    margin-top: 5%;
+    margin-top: 3%;
     margin-right: 0px;
     margin-left: 0px;
     vertical-align: middle;
     display:flex;
 }
 
-.logo-pic {
+img {
 
-    max-width: 25%;
-    max-height: 25%;
+    width: 220px;
+    height: auto;
 }
 
 .nav {
@@ -82,7 +95,7 @@ a:active { text-decoration: none; }
 
 
 .login { 
-    margin-top:4%;
+    margin-top:3%;
     width:40%;
     background-color:white;
     border-radius:6px;
@@ -98,10 +111,6 @@ a:active { text-decoration: none; }
     margin-bottom:3%;
 }
 
-#registration-button {
-
-    margin-bottom:3%;
-}
 
 .main-col {
 
@@ -208,20 +217,29 @@ input, .submit-login:hover {
 
     justify-content: center;
     text-align:center;
-    bottom: 0;
-    position: fixed;
+    height:30px;
+    margin-top: -30px;
 }
 
 
 input:-webkit-autofill::first-line {
 
-    font-family: 'Sora', sans-serif;
+    font-family: Helvetica, Arial, Helvetica, sans-serif;
+    font-weight: lighter;
 
 }
 
+.madeby {
 
-/* Registration Form Page */
+    margin-left: 2%;
+}
 
+/* Registration Form */
+
+.form-register {
+
+    margin-bottom: 4%;
+}
 
 .signup-form {
 
@@ -229,10 +247,28 @@ input:-webkit-autofill::first-line {
     border-radius: 6px;
     height: 40px;
     font-size: 1rem;
-    background-color: lightgray;
-    color: black;
+    background-color:rgb(245,246,247);
+    color:rgb(141,148,158);
     width: 80%;
+    border-width: thin;
+    font-family: Helvetica, Arial, Helvetica, sans-serif;
+    padding-left: 8px;
+    
 
+}
+
+.registration-password {
+
+    margin-top: 2%;
+    border-radius: 6px;
+    height: 40px;
+    font-size: 1rem;
+    background-color:rgb(245,246,247);
+    color:rgb(141,148,158);
+    width: 80%;
+    border-width: thin;
+    font-family: Helvetica, Arial, Helvetica, sans-serif;
+    padding-left: 8px;
 }
 
 .signup-text {
@@ -260,12 +296,24 @@ input:-webkit-autofill::first-line {
 }
 
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    box-shadow: 0 0 0px 1000px rgb(245,246,247) inset !important;
+}
+
+
 /* media queries */
 
 @media (min-width: 0px) and (max-width: 700px) {
 
 
- 
+    .madeby { 
+
+        font-size: 0.5rem;
+        margin-left: 25px;
+    }
 
     .login { 
         margin-top:3%;
@@ -277,7 +325,7 @@ input:-webkit-autofill::first-line {
 
     .nav { 
 
-        margin-top: 15%;
+        margin-top: 10%;
     }
 
     .login {
@@ -288,40 +336,57 @@ input:-webkit-autofill::first-line {
     .register-button {
 
         font-size: 1rem;
+        width: 60%;
+        height: 40px;
+        margin-bottom: 1%;
+        margin-top: 1%
     }
 
     .form-control {
 
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 }
 
 
-@media (min-width: 701px) and (max-width: 1024px) {
+@media (min-width: 701px) and (max-width: 1023px) {
 
     .login { 
-        margin-top:10%;
+        margin-top:5%;
         width:50%;
         background-color:white;
         border-radius:1rem;
         
     }
 
+    img { 
+
+        width: 150px;
+        height: auto;
+    }
     .nav { 
 
-        margin-top: 8%;
+        margin-top: 5%;
     }
+    
+    .login { 
+
+        margin-top: 10%;
+        width: 50%
+    }
+    
+
   
  
 }
 
 
-@media (min-width: 1025px) and (max-width:1600px) {
+@media (min-width: 1024px) and (max-width:1600px) {
 
 
     .login { 
 
-        margin-top: 4%;
+        margin-top: 5%;
         width: 45%;
     }
 
@@ -330,4 +395,14 @@ input:-webkit-autofill::first-line {
         margin-top: 3%
     }
 
+    .nav { 
+
+        margin-top: 5%
+    }
+
+    img { 
+
+        width: 250px;
+        height: auto;
+    }
 }

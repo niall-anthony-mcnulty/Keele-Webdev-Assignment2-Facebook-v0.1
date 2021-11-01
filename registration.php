@@ -28,33 +28,33 @@
     <main class='container registration'>
         <div class='row justify-content-center no-gutters main-row'>
             <div class ='col-xs-11 col-sm-11 col-md-11 col-lg-11 main-col'>
-                <form id='login-form registration-form' method="post" action="to database php">
+                <form id='login-form registration-form myForm' method="post" action="to database php" autocomplete="off" required="true">
                     <h1 class='signup-text'> Sign Up </h1>
                     <div class="registration-group">
-                        <input class="signup-form" type="text" name="fname" placeholder="First name">
+                        <input class="signup-form" type="text" name="fname" placeholder="First name" required="true">
                     </div>
                     
                     <div class="registration-group">
-                        <input class="signup-form" type="text" name="lname" placeholder="Last name">
+                        <input class="signup-form" type="text" name="lname" placeholder="Last name" required='true'>
                     </div>
 
                     <div class="registration-group">
-                        <input class="signup-form" type="email" name="lname" placeholder="Email address">
+                        <input class="signup-form" type="text" name="UserRegistrationEmail" placeholder="Email address" autocomplete="Email-Address" required='true'>
                     </div>
 
                     <div class="registration-group">
-                        <input class="singup-form" type="password" name="password" placeholder="New password">
+                        <input class="singup-form registration-password" type="password" name="new-password" placeholder= 'Set password' autocomplete= "new-password" required='true'>
                     </div>
 
                     <div class="registration-group">
                         <span class='poster-button'>
-                            <input class='signup-form' type="radio" name="poster" value="Poster">
+                            <input class='signup-form' type="radio" name="poster" value="Poster" required='true'>
                         </span>
                     </div>
 
                     <div class="registration-group">
                         <span class='reader-button'>
-                            <input class='signup-form' type="radio" name="read" value="Reader">
+                            <input class='signup-form' type="radio" name="read" value="Reader" required='true'>
                         </span>
                     </div>
 
@@ -62,9 +62,9 @@
                         <hr class='horizontal-line' >
                     </div>
                 </form>
-                <form id='registration-button' method="post" action="success.php">
+                <form id='registration-button' >
                     <div class="form-register signup">
-                        <input class='register-button singup' type="submit" name="signup" value="Signup">
+                        <input class='register-button singup' type="button" name="signup" value="Signup" onclick='closeForm()'>
                     </div>
                 </form>
             </div>

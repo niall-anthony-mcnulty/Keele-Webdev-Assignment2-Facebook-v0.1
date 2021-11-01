@@ -13,49 +13,54 @@
     <link href="https://fonts.googleapis.com/css2?family=Bellota&family=Bellota+Text&display=swap" rel="stylesheet", type='text/css'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">  
+    <script src='js/main.js' async></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
-    <nav>
-        <div class="container nav">
-            <div class='row justify-content-center no-gutters title-row w-100'>
-                <div class ='col-xs-12 col-sm-10 col-md-8 col-lg-8 title-col'>
-                    <a href='index.php' class='login-link'><img src='img/logo.png' alt='Friendzone logo' class='logo-pic'><span class='login-title'>Friend<u>Z</u>one</span></a>
+    <div class='wrapper'>
+        <div class='content-inside'>
+            <nav>
+                <div class="container nav">
+                    <div class='row justify-content-center no-gutters title-row w-100'>
+                        <div class ='col-xs-12 col-sm-10 col-md-8 col-lg-8 title-col'>
+                            <a href='index.php' class='login-link'><img src='img/logo.png' alt='Friendzone logo' class='logo-pic'><span class='login-title'>Friend<u>Z</u>one</span></a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </nav>
-    <main class='container login'>
-        <div class='row justify-content-center no-gutters main-row'>
-            <div class ='col-xs-11 col-sm-11 col-md-11 col-lg-11 main-col'>
-                <form id='login-form' method="post" action="home.php">
-                    <div class="form-group">
-                        <input class="form-control" type="email" name="email" placeholder="enter@email">
-                    </div>
+            </nav>
+            <main class='container login'>
+                <div class='row justify-content-center no-gutters main-row'>
+                    <div class ='col-xs-11 col-sm-11 col-md-11 col-lg-11 main-col'>
+                        <form id='login-form' method="post" action="home.php">
+                            <div class="form-group">
+                                <input class="form-control" type="email" name="email" placeholder="enter@email">
+                            </div>
 
-                    <div class="form-group">
-                        <input class="form-control" type="password" name="password" placeholder="Password">
-                    </div>
+                            <div class="form-group">
+                                <input class="form-control" type="password" name="password" placeholder="Password">
+                            </div>
 
-                    <div class="form-submit">
-                        <input class='submit-login' type="submit" name="login" value="Login">
+                            <div class="form-submit">
+                                <input class='submit-login' type="submit" name="login" value="Login">
+                            </div>
+                            <div class='line'>
+                                <hr class='horizontal-line' >
+                            </div>
+                        </form>
+                        <div class="form-register">
+                            <form method='post' action='registration.php'> 
+                                <input class='register-button' type="submit" name="register" value="Register">
+                            </form>
+                        </div>
                     </div>
-                    <div class='line'>
-                        <hr class='horizontal-line' >
-                    </div>
-                </form>
-                <form id='registration-button' method="post" action="registration.php">
-                    <div class="form-register">
-                        <input class='register-button' type="submit" name="register" value="Register">
-                    </div>
-                </form>
-            </div>
+                </div>
+            </main>
         </div>
-    </main>
+    </div>
     <footer class="container footer">
         <div class='row justify-content-center no-gutters footer-row w-100'>
             <div class ='col-xs-8 col-sm-8 col-md-8 col-lg-8 footer-col'>
-                <p>FriendZ<u>o</u>ne - Made by Niall McNulty</p>
+                <p class='madeby'>FriendZ<u>o</u>ne - Made by Niall McNulty</p>
             </div>
         </div>
     </footer>

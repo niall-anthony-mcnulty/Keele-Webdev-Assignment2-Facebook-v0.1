@@ -49,7 +49,7 @@
                         </form>
                         <div class="form-register">
                             <form method='post' action='registration.php'> 
-                                <input class='register-button' type="submit" name="register" value="Register">
+                                <input class='register-button' type="submit" name="register" value="Create Account">
                             </form>
                         </div>
                     </div>

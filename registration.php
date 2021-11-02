@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>FriendZone registration page</title>
+    <title>FriendZone Registration Page</title>
     <meta name="description" content="registration-page">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -47,19 +47,19 @@
                             <div class="registration-group">
                                 <input class="singup-form registration-password" type="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" title='A minimum of eight characters, at least one uppercase letter, one lowercase letter, one number and one special character is required:' name="new-password" placeholder= 'Set password' autocomplete= "new-password" required='true'>
                             </div>
+                            <div class='reader-poster-wrapper'>
+                                <div class="registration-group poster-button">
+                                    <span class='text-poster-button'>Poster</span>
+                                    <input class='signup-form signup-form-poster' type="radio" name="usertype" value="Poster" required='true'>
+                                </div>
 
-                            <div class="registration-group">
-                                <span class='poster-button'>
-                                    <input class='signup-form' type="radio" name="poster" value="Poster" required='true'>
-                                </span>
-                            </div>
-
-                            <div class="registration-group">
-                                <span class='reader-button'>
-                                    <input class='signup-form' type="radio" name="read" value="Reader" required='true'>
-                                </span>
-                            </div>
-
+                                <div class="registration-group reader-button">
+                                    <div class="text-wrapper-radio">
+                                        <span class='text-reader-button'>Reader</span>
+                                        <input class='signup-form signup-form-reader' type="radio" name="usertype" value="Reader" required='true'>
+                                    </div>
+                                </div>
+                            </div class='reader-poster-wrapper'>
                             <div class='line'>
                                 <hr class='horizontal-line' >
                             </div>

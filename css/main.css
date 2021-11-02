@@ -47,7 +47,7 @@ body {
 
     color: rgb(13,110,253);
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 3rem;
     height:100%;
 }
 
@@ -70,9 +70,11 @@ body {
 
 img {
 
-    width: 220px;
+    width: 200px;
     height: auto;
 }
+
+
 
 .nav {
     padding-right:0;
@@ -249,13 +251,13 @@ input, .submit-login:hover {
 
     margin-top: 2%;
     border-radius: 6px;
-    height: 30px;
+    height: 40px;
     font-size: 1rem;
     background-color:rgb(245,246,247);
     color:rgb(141,148,158);
     width: 80%;
     border-width: thin;
-    font-family: Helvetica, Arial, Helvetica, sans-serif;
+    font-family: 'Sora', 'Helvetica', sans-serif;
     padding-left: 8px;
     
 
@@ -265,20 +267,21 @@ input, .submit-login:hover {
 
     margin-top: 2%;
     border-radius: 6px;
-    height: 30px;
+    height: 40px;
     font-size: 1rem;
     background-color:rgb(245,246,247);
     color:rgb(141,148,158);
     width: 80%;
     border-width: thin;
-    font-family: Helvetica, Arial, Helvetica, sans-serif;
+    font-family: 'Sora', Helvetica, Arial, sans-serif;
     padding-left: 8px;
 }
 
 .signup-text {
 
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin-top: 2%;
+    margin-bottom: 5%;
 }
 
 
@@ -286,12 +289,14 @@ input, .submit-login:hover {
 
     
     height: 48px;
+    margin-top: 2%;
 
 }
 
 .registration-password {
 
     width: 100%;
+
 }
 
 .signup-form { 
@@ -300,7 +305,7 @@ input, .submit-login:hover {
 }
 .registration { 
     margin-top:4%;
-    width:340px;
+    width:800px;
     background-color:white;
     border-radius:6px;
     
@@ -311,7 +316,7 @@ input, .submit-login:hover {
     text-align: center;
     vertical-align: middle;
     margin:auto;
-    
+      
 }
 
 
@@ -370,8 +375,77 @@ input:-webkit-autofill:active {
     display:inline-block;
     width: 48%;
     margin-left: 1.4%;
-    
-    
+       
+}
+
+.registration-title {
+
+    font-size: 3rem;
+}
+
+/* display radio buttons next to each other */
+
+
+.poster-button { 
+
+    display:inline-block;
+    flex: 1;
+    width: 45%;
+    text-align: center
+}
+
+.reader-button {
+
+    display:inline-block;
+    flex: 2;
+    width: 45%;
+}
+
+.reader-poster-wrapper {
+
+    margin-top: 5%;
+}
+.text-poster-button {
+
+    display:inline-block;
+    flex: 1;
+    width: 20%;
+    text-align: right;
+    font-size: 1.2rem;
+}
+
+.signup-form-poster {
+
+    display:inline-block;
+    flex: 2;
+    width: 20%;
+    vertical-align: middle;
+    margin: 0;
+    align-items: left;
+    text-align: left
+
+}
+
+.text-reader-button {
+
+    display:inline-block;
+    flex: 1;
+    width: 20%;
+    text-align: right;
+    font-size: 1.2rem;
+
+}
+
+.signup-form-reader {
+
+    display:inline-block;
+    flex: 2;
+    width: 20%;
+    vertical-align: middle;
+    margin: 0;
+    align-items: left;
+    text-align: left;
+
 }
 /* media queries */
 
@@ -1135,12 +1209,3 @@ and (orientation: portrait) {
 
 }
 
-
-@media only screen
-and (min-device-width: 1501px) {
-
-
-
-
-
-}

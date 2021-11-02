@@ -477,7 +477,19 @@ input:-webkit-autofill:active {
 
 /* HOMEPAGE - home.css*/
 
+img.search-icon {
 
+    width: 20px;
+    height: auto;
+    
+
+}
+
+div.homepage-nav {
+
+    width: 100%;
+ 
+}
 
 /* media queries */
 

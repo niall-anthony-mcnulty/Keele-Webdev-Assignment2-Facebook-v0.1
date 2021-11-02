@@ -35,10 +35,10 @@
                             <h1 class='signup-text'> Sign Up </h1>
                             <div class='name-wrapper'>
                                 <div class="registration-group first-name">
-                                    <input class="signup-form" type="text" name="fname" placeholder="First name" required="true">
+                                    <input class="signup-form" type="text" name="name" placeholder="Full name" required="true">
                                 </div>
                                 <div class="registration-group last-name">
-                                    <input class="signup-form" type="text" name="lname" placeholder="Last name" required='true'>
+                                    <input class="signup-form" type="text" name="userName" placeholder="Username" required='true'>
                                 </div>
                             </div>
                             <div class="registration-group">

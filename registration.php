@@ -53,15 +53,12 @@
                                     <span class='text-poster-button'>Poster</span>
                                     <input class='signup-form signup-form-poster' type="radio" name="usertype" value="Poster" required='true'>
                                 </div>
-
                                 <div class="registration-group reader-button">
-                                    <div class="text-wrapper-radio">
-                                        <span class='text-reader-button'>Reader</span>
-                                        <input class='signup-form signup-form-reader' type="radio" name="usertype" value="Reader" required='true'>
-                                    </div>
+                                    <span class='text-reader-button'>Reader</span>
+                                    <input class='signup-form signup-form-reader' type="radio" name="usertype" value="Reader" required='true'>
                                 </div>
                                 <div class='popup-explanation'></div>
-                            </div class='reader-poster-wrapper'>
+                            </div>
                             <div class='line'>
                                 <hr class='horizontal-line' >
                             </div>

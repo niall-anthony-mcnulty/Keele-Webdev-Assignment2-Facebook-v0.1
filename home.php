@@ -12,8 +12,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bellota&family=Bellota+Text&display=swap" rel="stylesheet", type='text/css'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">  
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/home.js"></script> 
 </head>
 <body>
     <div class='wrapper'>
@@ -36,7 +38,7 @@
                     <div class ='col-xs-11 col-sm-11 col-md-11 col-lg-11 registration-col'>
                         <form id='post-article' class='registration-submit-form feed' method="post"  autocomplete="off" required="true">
                             <h1 class='signup-text article-header'> Feed</h1>
-                                <input id='myThoughts' type='text' placeholder="What's on your mind...">
+                                <textarea id='myThoughts' onkeyup="$(this).height(5);$(this).height($(this).prop('scrollHeight'))" form= 'post-article' placeholder="What's on your mind..." maxlength='300' minlength='1' ></textarea>
                                 <hr class='horizontal-line horizontal-line-post'>
                             </div>
                             <div class="form-register registration-group signup post-article-button" id='post-button-div' >
@@ -44,6 +46,7 @@
                                 <!-- send to database and insert ajax response  -->
                             </div>
                         </form>
+                    
                     </div>
                 </div>
             </main>

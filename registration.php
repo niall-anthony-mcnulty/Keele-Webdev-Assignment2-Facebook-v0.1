@@ -16,64 +16,67 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
-    <nav>
-        <div class="container nav">
-            <div class='row justify-content-center no-gutters title-row w-100'>
-                <div class ='col-xs-12 col-sm-10 col-md-8 col-lg-8 title-col'>
-                    <a href='index.php' class='login-link'><img src='img/logo.png' alt='Friendzone logo' class='logo-pic'><span class='login-title'>Friend<u>Z</u>one</span></a>
+    <div class='wrapper'>
+        <div class='content-inside'>
+            <nav>
+                <div class="container nav nav-registration">
+                    <div class='row justify-content-center no-gutters title-row title-registration-row w-100'>
+                        <div class ='col-xs-12 col-sm-10 col-md-8 col-lg-8 title-col title-registration-col'>
+                            <a href='index.php' class='login-link registration-login-link'><img src='img/logo.png' alt='Friendzone logo' class='logo-pic' id='registration-pic'><span class='registration-title'>Friend<u>Z</u>one</span></a>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </nav>
+            <main class='container registration'>
+                <div class='row justify-content-center no-gutters registration-row'>
+                    <div class ='col-xs-11 col-sm-11 col-md-11 col-lg-11 registration-col'>
+                        <form id='login-form registration-form' method="post" action="index.php" autocomplete="off" required="true">
+                            <h1 class='signup-text'> Sign Up </h1>
+                            <div class='name-wrapper'>
+                                <div class="registration-group first-name">
+                                    <input class="signup-form" type="text" name="fname" placeholder="First name" required="true">
+                                </div>
+                                <div class="registration-group last-name">
+                                    <input class="signup-form" type="text" name="lname" placeholder="Last name" required='true'>
+                                </div>
+                            </div>
+                            <div class="registration-group">
+                                <input class="signup-form" type='email' pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*$" name="Email" placeholder="Email address" autocomplete="Email-Address" required='true'>
+                            </div>
+
+                            <div class="registration-group">
+                                <input class="singup-form registration-password" type="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" title='A minimum of eight characters, at least one uppercase letter, one lowercase letter, one number and one special character is required:' name="new-password" placeholder= 'Set password' autocomplete= "new-password" required='true'>
+                            </div>
+
+                            <div class="registration-group">
+                                <span class='poster-button'>
+                                    <input class='signup-form' type="radio" name="poster" value="Poster" required='true'>
+                                </span>
+                            </div>
+
+                            <div class="registration-group">
+                                <span class='reader-button'>
+                                    <input class='signup-form' type="radio" name="read" value="Reader" required='true'>
+                                </span>
+                            </div>
+
+                            <div class='line'>
+                                <hr class='horizontal-line' >
+                            </div>
+                            <div class="form-register registration-group signup" id='registration-button' >
+                                <input class='register-button singup' type="submit" name="signup" value="Signup">
+                            </div>
+                        </form>
+                        
+                    </div>
+                </div>
+            </main>
         </div>
-    </nav>
-    <main class='container registration'>
-        <div class='row justify-content-center no-gutters main-row'>
-            <div class ='col-xs-11 col-sm-11 col-md-11 col-lg-11 main-col'>
-                <form id='login-form registration-form myForm' method="post" action="to database php" autocomplete="off" required="true">
-                    <h1 class='signup-text'> Sign Up </h1>
-                    <div class="registration-group">
-                        <input class="signup-form" type="text" name="fname" placeholder="First name" required="true">
-                    </div>
-                    
-                    <div class="registration-group">
-                        <input class="signup-form" type="text" name="lname" placeholder="Last name" required='true'>
-                    </div>
-
-                    <div class="registration-group">
-                        <input class="signup-form" type="text" name="UserRegistrationEmail" placeholder="Email address" autocomplete="Email-Address" required='true'>
-                    </div>
-
-                    <div class="registration-group">
-                        <input class="singup-form registration-password" type="password" name="new-password" placeholder= 'Set password' autocomplete= "new-password" required='true'>
-                    </div>
-
-                    <div class="registration-group">
-                        <span class='poster-button'>
-                            <input class='signup-form' type="radio" name="poster" value="Poster" required='true'>
-                        </span>
-                    </div>
-
-                    <div class="registration-group">
-                        <span class='reader-button'>
-                            <input class='signup-form' type="radio" name="read" value="Reader" required='true'>
-                        </span>
-                    </div>
-
-                    <div class='line'>
-                        <hr class='horizontal-line' >
-                    </div>
-                </form>
-                <form id='registration-button' >
-                    <div class="form-register signup">
-                        <input class='register-button singup' type="button" name="signup" value="Signup" onclick='closeForm()'>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </main>
+    </div>
     <footer class="container footer">
         <div class='row justify-content-center no-gutters footer-row w-100'>
             <div class ='col-xs-8 col-sm-8 col-md-8 col-lg-8 footer-col'>
-                <p>FriendZ<u>o</u>ne - Made by Niall McNulty</p>
+                <p class="registration-footer">FriendZ<u>o</u>ne - Made by Niall McNulty</p>
             </div>
         </div>
     </footer>

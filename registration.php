@@ -31,7 +31,7 @@
             <main class='container registration'>
                 <div class='row justify-content-center no-gutters registration-row'>
                     <div class ='col-xs-11 col-sm-11 col-md-11 col-lg-11 registration-col'>
-                        <form id='login-form registration-form' method="post" action="index.php" autocomplete="off" required="true">
+                        <form id='registration-form' class='registration-submit-form' method="post" action="index.php" autocomplete="off" required="true">
                             <h1 class='signup-text'> Sign Up </h1>
                             <div class='name-wrapper'>
                                 <div class="registration-group first-name">
@@ -66,7 +66,6 @@
                                 <input class='register-button singup' type="submit" name="signup" value="Signup">
                             </div>
                         </form>
-                        
                     </div>
                 </div>
             </main>

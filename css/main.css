@@ -191,7 +191,7 @@ a:active { text-decoration: none; }
     transition: 0.3s ease-in-out;
     cursor: pointer;
     outline:none;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 
 }
 
@@ -274,6 +274,14 @@ input, .submit-login:hover {
     border-width: thin;
     font-family: 'Sora', Helvetica, Arial, sans-serif;
     padding-left: 8px;
+}
+
+.success-msg {
+
+    text-align: center;
+    justify-content: center;
+    color: red;
+    margin-top: 50%;
 }
 
 .signup-text {
@@ -431,7 +439,7 @@ input:-webkit-autofill:active {
     flex: 2;
     width: 20%;
     vertical-align: middle;
-    margin: 0;
+    margin: 1px;
     align-items: left;
     text-align: left
 
@@ -451,9 +459,9 @@ input:-webkit-autofill:active {
 
     display:inline-block;
     flex: 2;
-    width: 20%;
+    width: 23%;
     vertical-align: middle;
-    margin: 0;
+    margin: 1px;
     align-items: left;
     text-align: left;
 }
@@ -465,6 +473,8 @@ input:-webkit-autofill:active {
     margin-top: 3%;
 
 }
+
+
 
 /* media queries */
 
@@ -696,7 +706,7 @@ and (max-width: 299px){
     }
 
 }
-
+/* iphoneX */
 @media only screen
 and (width: 375px) 
 and (height: 812px) {
@@ -806,7 +816,7 @@ and (height: 812px) {
     
     .register-button {
 
-        font-size: 1rem;
+        font-size: 0.85rem;
         width: 60%;
         height: 40px;
         margin-bottom: 1%;
@@ -830,6 +840,16 @@ and (height: 812px) {
         width: 60%;
         text-align: right;
         font-size: 1rem;
+    }
+
+    .signup-form { 
+
+        font-size: 0.8rem;
+    }
+
+    .registration-password {
+
+        font-size: 0.8rem;
     }
     
     .signup-form-poster {

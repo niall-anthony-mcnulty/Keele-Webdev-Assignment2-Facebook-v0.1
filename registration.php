@@ -64,6 +64,7 @@
                             </div>
                             <div class="form-register registration-group signup" id='registration-button' >
                                 <input class='register-button singup' type="submit" name="signup" value="Signup">
+                                <!-- send to database and insert ajax response  -->
                             </div>
                         </form>
                     </div>

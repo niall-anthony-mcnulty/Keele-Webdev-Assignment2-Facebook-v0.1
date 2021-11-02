@@ -1,0 +1,118 @@
+/* Body styling - logo from freeiconspng.com */
+:root {
+    
+    --blue: rgb(13,110,253);
+    --grey: rgb(240,242,245); 
+    --submitblue: rgb(25,119,242);  
+}
+
+html,
+body {
+  height: 100%;
+  margin:0;
+}
+
+.wrapper {
+
+    min-height:100%;
+    
+    
+}
+
+.content-inside { 
+
+    padding: 20px;
+    padding-bottom: 30px;
+    width: 100%
+}
+
+body { 
+    background-color :var(--grey);
+    font-family: 'Sora', sans-serif;
+    background-size: cover;
+    border-radius: 1rem;
+    color: var(--blue);
+    
+}
+/* nav */
+
+
+
+
+.login-title { 
+
+    color: rgb(13,110,253);
+    text-decoration: none;
+    font-size: 2.5rem;
+    height:100%;
+    margin-left: 2%;
+}
+
+.title-col { 
+    justify-content: center;
+    text-align: center;
+    vertical-align: middle;
+    margin:auto;
+}
+
+
+.title-row {
+
+    margin-top: 3%;
+    margin-right: 0px;
+    margin-left: 0px;
+    vertical-align: middle;
+    display:flex;
+}
+
+img {
+
+    width: 180px;
+    height: auto;
+}
+
+
+
+/* inline nav items  */
+
+.wrapper-1 {
+
+    display:grid;
+    grid-template-columns: 1fr, 1fr, 1fr;
+    grid-template-areas: "left middle right";
+    align-items: center;
+    vertical-align: middle;
+    
+}
+
+.welcome-message-text {
+
+    margin:0;
+}
+
+
+
+/* footer */
+
+.footer-col {
+
+    justify-content: center;
+    text-align:center;
+    height:40px;
+    margin-top: -40px;
+    
+}
+
+
+.form-control:-webkit-autofill::first-line {
+
+    font-family: 'Sora', Helvetica, Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    font-size: 1rem;
+
+}
+
+.madeby {
+
+    margin-left: 2%;
+}

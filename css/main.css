@@ -47,7 +47,7 @@ body {
 
     color: rgb(13,110,253);
     text-decoration: none;
-    font-size: 3rem;
+    font-size: 2.5rem;
     height:100%;
 }
 
@@ -70,16 +70,15 @@ body {
 
 img {
 
-    width: 200px;
+    width: 180px;
     height: auto;
 }
-
 
 
 .nav {
     padding-right:0;
     height: auto;
-    margin-top: 2%;
+    margin-top: 1%;
 }
 
 /* Get rid of text underline for login logo link */
@@ -168,7 +167,7 @@ a:active { text-decoration: none; }
 
 .line {
 
-    margin-top: 6%;
+    margin-top: 3%;
     
 }
 
@@ -279,9 +278,9 @@ input, .submit-login:hover {
 
 .signup-text {
 
-    font-size: 2rem;
+    font-size: 1.6rem;
     margin-top: 2%;
-    margin-bottom: 5%;
+    margin-bottom: 1%;
 }
 
 
@@ -304,10 +303,11 @@ input, .submit-login:hover {
     width: 100%;
 }
 .registration { 
-    margin-top:4%;
+    margin-top:3%;
     width:800px;
     background-color:white;
     border-radius:6px;
+    height: auto;
     
 }
 
@@ -327,6 +327,7 @@ input, .submit-login:hover {
     margin-left: 0px;
     vertical-align: middle;
     display:flex;
+
     
 }
 
@@ -334,9 +335,10 @@ input, .submit-login:hover {
 
     color: rgb(13,110,253);
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 2.5rem;
     height:100%;
 }
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
@@ -350,6 +352,16 @@ input:-webkit-autofill:active {
     width: 100%;
 }
 
+.register-button {
+
+    margin-top: 0;
+
+}
+
+.registration-footer {
+
+    font-size: 0.8rem;
+}
 
 .wrapper {
 
@@ -378,11 +390,10 @@ input:-webkit-autofill:active {
        
 }
 
-.registration-title {
+.title-registration-row {
 
-    font-size: 3rem;
+    margin-top: 0;
 }
-
 /* display radio buttons next to each other */
 
 
@@ -445,8 +456,16 @@ input:-webkit-autofill:active {
     margin: 0;
     align-items: left;
     text-align: left;
+}
+
+.popup-explanation {
+
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 3%;
 
 }
+
 /* media queries */
 
 @media only screen

@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Bellota&family=Bellota+Text&display=swap" rel="stylesheet", type='text/css'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">  
+    <script src='js/main.js' async></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
@@ -59,6 +60,7 @@
                                         <input class='signup-form signup-form-reader' type="radio" name="usertype" value="Reader" required='true'>
                                     </div>
                                 </div>
+                                <div class='popup-explanation'></div>
                             </div class='reader-poster-wrapper'>
                             <div class='line'>
                                 <hr class='horizontal-line' >

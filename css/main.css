@@ -504,8 +504,24 @@ input#myThoughts {
     width: 100%;
     border: none;
     color: black;
-
+    
 }
+
+textarea {
+
+    resize: none;
+    overflow:hidden;
+    min-height: 50px;
+    width: 100%;
+    border: none;
+}
+
+
+textarea.scroll::-webkit-scrollbar {
+    display: none;
+  }
+
+
 /* media queries */
 
 @media only screen

@@ -491,6 +491,21 @@ div.homepage-nav {
  
 }
 
+.horizontal-line-post {
+
+    margin-top:0;
+}
+
+
+input#myThoughts {
+
+    background:none;
+    outline: none;
+    width: 100%;
+    border: none;
+    color: black;
+
+}
 /* media queries */
 
 @media only screen

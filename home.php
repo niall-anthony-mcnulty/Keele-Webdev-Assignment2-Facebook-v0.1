@@ -35,8 +35,9 @@
                 <div class='row justify-content-center no-gutters registration-row'>
                     <div class ='col-xs-11 col-sm-11 col-md-11 col-lg-11 registration-col'>
                         <form id='post-article' class='registration-submit-form feed' method="post"  autocomplete="off" required="true">
-                            <h1 class='signup-text article-header'> What's on your mind...</h1>
-                                <hr class='horizontal-line'>
+                            <h1 class='signup-text article-header'> Feed</h1>
+                                <input id='myThoughts' type='text' placeholder="What's on your mind...">
+                                <hr class='horizontal-line horizontal-line-post'>
                             </div>
                             <div class="form-register registration-group signup post-article-button" id='post-button-div' >
                                 <input class='register-button singup post-button' type="submit" name="post" value="Post">

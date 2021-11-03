@@ -669,6 +669,28 @@ textarea.scroll::-webkit-scrollbar {
 
     margin-bottom: 12%;
 }
+
+.bio-grid {
+
+    display:inline;
+    
+}
+
+.bio-h1 {
+
+    float:middle;
+}
+
+.add-bio {
+
+    float:right;
+}
+
+.edit-bio {
+
+    float: left;
+}
+
 /* media queries */
 
 @media only screen

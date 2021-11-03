@@ -33,9 +33,14 @@
             </nav>
             <main class='container homepage'>
                 <div class='row justify-content-center no-gutters registration-row w-100'>
-                    <div class ='col-xs-12 col-sm-12 col-md-10 col-lg-10 registration-col'>
-                        <h1 class='bio-h1'> Bio</h1>
-                        <div class='create-bio'></div> 
+                    <div class ='col-xs-12 col-sm-12 col-md-10 col-lg-10 registration-col'>  
+                        <div class='bio-grid'>  
+                            <h1 class='bio-h1'> Bio</h1>
+                            <h4 class='add-bio'><a href='add-bio.php'> add </a></h4>
+                            <h4 class='edit-bio'><a href='edit0bio.php'> edit </a></h4>
+                        </div>      
+                        <div class='bio-empty-div'>
+                        </div> 
                     </div>
                 </div>  
                 <hr class='line-seperate-feed'>

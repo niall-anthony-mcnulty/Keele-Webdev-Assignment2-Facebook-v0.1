@@ -8,7 +8,7 @@
     $userName = $_POST['userName'];
     $email = $_POST['Email'];
     $password = $_POST['new-password'];
-    $password = password_hash($password, PASSWORD_DEFAULT);
+    $newPassword = password_hash($password, PASSWORD_DEFAULT);
     $userType = $_POST['usertype'];
 
     // check no users have the same email or username 
@@ -33,7 +33,7 @@
     
     // if not, insert date into database table //
         $stmt = $conn->$prepare("INSERT INTO users ('email', 'fullName', 'userName', 'userPassword', 'userType') VAlUES (?,?,?,?,?)");
-        $stmt->bind_param("sssss", $email, $fullName, $userName, $password, $userType);
+        $stmt->bind_param("sssss", $email, $fullName, $userName, $newPassword, $userType);
         // $stmt->execute();
         
         if ($stmt->execute()) {

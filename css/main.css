@@ -1034,6 +1034,27 @@ and (max-width: 299px){
     #search-bar-nav::-moz-placeholder {
         color:transparent;
     }
+
+
+    /* bio-pages  */
+
+.edit-bio {
+
+    font-size: 15px;
+    margin-bottom: 0;
+
+}
+
+.add-bio {
+
+    font-size: 15px;
+    margin-bottom: 0
+}
+.line-seperate-feed {
+
+    margin-top: 0;
+}
+
 }
 
 

@@ -21,6 +21,7 @@
         <div class='center'>
             <div class='row justify-content-center align-text center'>
                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                    <h1 class='add-bio-header'> Create a bio! </h1>
                     <form action='profile.php' method='POST' id='add-bio-form'>
                         <label id="name-label" for="name">Name</label>
                         <input type="text" name="name" id="name" class="form-control" placeholder="Enter your full name"/>

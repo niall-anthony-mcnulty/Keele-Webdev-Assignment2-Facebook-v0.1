@@ -43,7 +43,7 @@ $(document).ready(function() {
                   setTimeout(function() {
 
                     form.submit();
-                    }, 3000);
+                    }, 4000);
                
             }, 500);
         

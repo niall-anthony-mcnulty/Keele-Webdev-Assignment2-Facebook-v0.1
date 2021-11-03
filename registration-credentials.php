@@ -21,6 +21,7 @@
     if ($sql1 == TRUE) {
 
         echo "<p> This email address is already in use! Please try another. </p>";
+        sleep(2);
         header("Location:registration.php");
 
 
@@ -29,6 +30,7 @@
     elseif ($sql2 == TRUE) {
 
         echo "<p> This username is already in use! Please try another. </p>";
+        sleep(2);
         header("Location:registration.php");
     }
 

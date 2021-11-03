@@ -28,8 +28,8 @@
                         <div class ='col-xs-4 col-sm-4 col-md-4 col-lg-4 title-col title-registration-col homepage-col homepage-col-logo'>
                             <a href='home.php' class='login-link registration-login-link'><img src='img/logo.png' alt='Friendzone logo' class='logo-pic homepage-logo' id='registration-pic'></a>
                         </div>
-                        <div class ='col-xs-2 col-sm-2 col-md-2 col-lg-2 title-col title-registration-col homepage-col homepage-col-profile-link'><h4 class='profile-link'>Profile</h4></div>
-                        <div class ='col-xs-2 col-sm-2 col-md-2 col-lg-2 title-col title-registration-col homepage-col homepage-col-signout-link'><h4 class='signout-link'>Sign Out</h4></div>
+                        <div class ='col-xs-2 col-sm-2 col-md-2 col-lg-2 title-col title-registration-col homepage-col homepage-col-profile-link'><h4 class='profile-link'><a href='profile.php'>Profile</a></h4></div>
+                        <div class ='col-xs-2 col-sm-2 col-md-2 col-lg-2 title-col title-registration-col homepage-col homepage-col-signout-link'><h4 class='signout-link'><a href='index.php'>Sign Out</a></h4></div>
                     </div>
                 </div>
             </nav>
@@ -53,6 +53,7 @@
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>   
             </main>

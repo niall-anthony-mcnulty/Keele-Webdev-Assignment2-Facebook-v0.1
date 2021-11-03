@@ -644,6 +644,31 @@ textarea.scroll::-webkit-scrollbar {
 
 /* PROFILE PAGE */
 
+.bio-h1 {
+
+    margin-bottom: 10%;
+    margin-top: 3%
+}
+
+.line-seperate-feed {
+
+    border-top: 2px solid grey;
+    margin-bottom: 3%;
+    
+}
+
+.feed-row {
+
+    
+    margin-bottom: 5%;
+    text-align: center;
+    justify-content: center
+}
+
+.table-feed {
+
+    margin-bottom: 12%;
+}
 /* media queries */
 
 @media only screen
@@ -988,6 +1013,8 @@ and (max-width: 299px){
         color:transparent;
     }
 }
+
+
 
 
 /* iphoneX */

@@ -5,7 +5,7 @@
     require_once('includes/db-login.php');
 
     $fullName = $_POST['name'];
-    $userName = $_POST['userName'];
+    $userName = $_POST['username'];
     $email = $_POST['Email'];
     $password = $_POST['new-password'];
     $userType = $_POST['usertype'];
@@ -32,9 +32,10 @@
             
     
     // if not, insert date into database table //
-        $stmt = $conn->$prepare("INSERT INTO users (email, fullName, userName, userPassword, userType) VAlUES (?,?,?,?,?)");
+        $sql = "INSERT INTO users (email, fullName, userName, userPassword, userType) VAlUES (?,?,?,?,?)";
+        $stmt = $conn->$prepare();
         $stmt->bind_param("sssss", $email, $fullName, $userName, $password, $userType);
-        // $stmt->execute();
+        $stmt->execute();
         
         if ($stmt->execute()) {
         

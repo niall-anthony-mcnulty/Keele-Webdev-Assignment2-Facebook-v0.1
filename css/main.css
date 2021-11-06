@@ -1274,6 +1274,14 @@ and (height: 812px) {
     
     }
 
+    div.popup-confirmation {
+
+        color: red;
+        font-size: 0.7rem;
+        margin-top: 1%;
+    }
+
+
     .signup-text {
 
         font-size: 1.6rem;

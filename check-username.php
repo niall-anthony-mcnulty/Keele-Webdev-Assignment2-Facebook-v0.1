@@ -4,10 +4,10 @@ require 'includes/db-login.php';
 
 
 
-if (isset($_REQUEST['username'])) {
+if (isset($_POST['username'])) {
     
     
-    $username = $_REQUEST['username'];
+    $username = $_POST['username'];
 
     $sql = "SELECT userName FROM users WHERE userName=?";
     $stmt = $conn->prepare($sql);

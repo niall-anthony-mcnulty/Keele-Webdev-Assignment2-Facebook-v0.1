@@ -14,8 +14,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Bellota&family=Bellota+Text&display=swap" rel="stylesheet", type='text/css'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">  
-    <script src='js/registration.js'></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src='js/registration.js'></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
 </head>
 <body>
     <div class='wrapper'>
@@ -39,7 +40,7 @@
                                     <input class="signup-form" type="text" name="name" placeholder="Full name" required="true">
                                 </div>
                                 <div class="registration-group last-name">
-                                    <input id ="userName" class="signup-form" type="text" name="userName" placeholder="Username" required='true'>
+                                    <input id ="user--name" class="signup-form" type="text" name="user--name" placeholder="Username" required='true'>
                                 </div>
                             </div>
                             <div class="registration-group">
@@ -59,6 +60,7 @@
                                     <input class='signup-form signup-form-reader' type="radio" name="usertype" value="Reader" required='true'>
                                 </div>
                                 <div class='popup-explanation'></div>
+                                <div class='popup-confirmation'></div>
                             </div>
                             <div class='line'>
                                 <hr class='horizontal-line' >

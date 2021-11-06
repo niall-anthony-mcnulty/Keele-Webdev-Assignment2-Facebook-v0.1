@@ -1,3 +1,5 @@
+// Inform user of the user options
+
 $(document).ready(function() {
 
     $('.signup-form-poster').click(function(){
@@ -10,17 +12,9 @@ $(document).ready(function() {
         $('.popup-explanation').text('You can only post and read with the reader option!')
     });
 
-
 });
 
-$(document).ready(function() {
-    
-    $('#myThoughts').oninput(function() {
-        element.style.height = "5px";
-        element.style.height = (element.scrollHeight)+"px";
-    })
 
-});
     
 // $(document).ready(function() {
     

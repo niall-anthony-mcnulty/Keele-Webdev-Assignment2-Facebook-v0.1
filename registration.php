@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Bellota&family=Bellota+Text&display=swap" rel="stylesheet", type='text/css'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">  
-    <script src='js/main.js' async></script>
+    <script src='js/registration.js'></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
@@ -39,7 +39,7 @@
                                     <input class="signup-form" type="text" name="name" placeholder="Full name" required="true">
                                 </div>
                                 <div class="registration-group last-name">
-                                    <input class="signup-form" type="text" name="userName" placeholder="Username" required='true'>
+                                    <input id ="userName" class="signup-form" type="text" name="userName" placeholder="Username" required='true'>
                                 </div>
                             </div>
                             <div class="registration-group">

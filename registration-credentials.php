@@ -21,8 +21,8 @@
     if ($sql1 == TRUE) {
 
         echo "<p> This email address is already in use! Please try another. </p>";
-        sleep(2);
-        header("Location:registration.php");
+        
+        header("Refresh:5; url=registration.php", true, 303);
 
 
     
@@ -31,7 +31,7 @@
 
         echo "<p> This username is already in use! Please try another. </p>";
         sleep(2);
-        header("Location:registration.php");
+        header("Refresh:2; url=registration.php",true, 303);
     }
 
     else {

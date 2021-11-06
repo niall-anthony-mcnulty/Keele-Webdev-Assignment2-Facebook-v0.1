@@ -700,11 +700,54 @@ div#popup-explanation {
 
 }
 
-div#popup-confirmation {
+div#popup-email-confirmation {
 
     color: red;
     font-size: 0.9rem;
     margin-top: 1%;
+}
+
+div#popup-username-confirmation {
+
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 1%;
+}
+
+/* registration alert page */
+
+div.registration-alert {
+
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      
+    };
+
+div.registration-alert img {
+
+    height: auto;
+    width: 100%;
+}
+ 
+
+p.registration-alert-successful {
+
+    text-align: center;
+    font-size: 1rem;
+    color: rgb(24, 180, 24);
+    margin-left: 5px;
+};
+
+
+p.registration-alert-unsuccessful {
+
+    text-align: center;
+    font-size: 1rem;
+    margin-left: 5px;
+    color: rgb(182, 24, 24)
 }
 
 /* media queries */

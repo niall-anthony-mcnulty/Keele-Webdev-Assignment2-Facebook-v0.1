@@ -33,22 +33,24 @@
             <main class='container registration'>
                 <div class='row justify-content-center no-gutters registration-row'>
                     <div class ='col-xs-11 col-sm-11 col-md-11 col-lg-11 registration-col'>
-                        <form id='registration-form' class='registration-submit-form' method="POST" action="registration-credentials.php" autocomplete="off" required="true">
+                        <form id='registration-form' class='registration-submit-form' method="post" action="registration-credentials.php" autocomplete="off" required="true">
                             <h1 class='signup-text'> Sign Up </h1>
                             <div class='name-wrapper'>
-                                <div class="registration-group first-name">
+                                <div class="registration-group first-name full-name">
                                     <input class="signup-form" type="text" name="name" placeholder="Full name" required="true">
                                 </div>
-                                <div class="registration-group last-name">
+                                <div class="registration-group last-name username">
                                     <input id ="user--name" class="signup-form" type="text" name="user--name" placeholder="Username" required='true'>
                                 </div>
                             </div>
                             <div class="registration-group">
-                                <input class="signup-form" type='email' pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*$" name="Email" placeholder="Email address" autocomplete="Email-Address" required='true'>
+                            <!-- https://stackoverflow.com/questions/201323/how-can-i-validate-an-email-address-using-a-regular-expression email regex -->
+                                <input id ='user--email' class="signup-form" type='email' pattern='([^][()<>@,;:\\". \x00-\x1F\x7F]+|"(\n|(\\\r)*([^"\\\r\n]|\\[^\r]))*(\\\r)*")(\.([^][()<>@,;:\\". \x00-\x1F\x7F]+|"(\n|(\\\r)*([^"\\\r\n]|\\[^\r]))*(\\\r)*"))*@([^][()<>@,;:\\". \x00-\x1F\x7F]+|\[(\n|(\\\r)*([^][\\\r\n]|\\[^\r]))*(\\\r)*])(\.([^][()<>@,;:\\". \x00-\x1F\x7F]+|\[(\n|(\\\r)*([^][\\\r\n]|\\[^\r]))*(\\\r)*]))*' name="user--email" placeholder="Email address" autocomplete="Email-Address" required='true'>
                             </div>
 
                             <div class="registration-group">
-                                <input class="singup-form registration-password" type="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" title='A minimum of eight characters, at least one uppercase letter, one lowercase letter, one number and one special character is required:' name="new-password" placeholder= 'Set password' autocomplete= "new-password" required='true'>
+                            <!-- https://gist.github.com/ravibharathii/3975295 regex-->
+                                <input class="singup-form registration-password" type="password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" title='A minimum of eight characters, at least one uppercase letter, one lowercase letter, one number and one special character is required:' name="new-password" placeholder= 'Set password' autocomplete= "new-password" required='true'>
                             </div>
                             <div class='reader-poster-wrapper'>
                                 <div class="registration-group poster-button">
@@ -59,11 +61,11 @@
                                     <span class='text-reader-button'>Reader</span>
                                     <input class='signup-form signup-form-reader' type="radio" name="usertype" value="Reader" required='true'>
                                 </div>
+                                <div id='popup-username-confirmation'></div>
+                                <div id='popup-email-confirmation'></div>
                                 <div id='popup-explanation'></div>
-                                <div id='popup-confirmation'></div>
-                            </div>
                             <div class='line'>
-                                <hr class='horizontal-line' >
+                                <hr class='horizontal-line'>
                             </div>
                             <div class="form-register registration-group signup" id='registration-button' >
                                 <input class='register-button singup' type="submit" name="signup" value="Signup">

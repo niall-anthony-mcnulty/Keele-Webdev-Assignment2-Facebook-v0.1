@@ -15,6 +15,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">  
     <script src='js/index.js' async></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
 </head>
 <body>
     <div class='wrapper'>
@@ -50,7 +51,7 @@
                         <div class="form-register">
                             <form method='post' action='registration.php'> 
                                 <input class='register-button' type="submit" name="register" value="Create Account">
-                            </form>
+                            </form>   
                         </div>
                     </div>
                 </div>

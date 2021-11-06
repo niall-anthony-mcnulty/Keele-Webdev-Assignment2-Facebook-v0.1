@@ -19,16 +19,46 @@ $(document).ready(function($) {
                 console.log(response);
                 
                 if (response == 'taken') {
-                $('#popup-confirmation').text('Username exists, try another!');
+                $('#popup-username-confirmation').text('Username exists, try another!');
                     }
                 else {
-                    $('#popup-confirmation').text('');
+                    $('#popup-username-confirmation').text('');
                     }
             });
     
         }
            
     });
+
+
+    $('#user--email').keyup(function(){ 
+
+        var userEmail = $(this).val().trim();
+        if (userEmail != '' ) {
+
+        // ajax call to check whether email exists
+            $.ajax({
+                method: 'POST',
+                url: './check-email.php',
+                data: {
+                        'email': userEmail,
+                        },                    
+            }).done((response) => {
+                    
+                console.log(response);
+                
+                if (response == 'taken') {
+                $('#popup-email-confirmation').text('Email address exists, try another!');
+                    }
+                else {
+                    $('#popup-email-confirmation').text('');
+                    }
+            });
+    
+        }
+           
+    });
+
 
         // Popup for explanaion of users
 
@@ -42,8 +72,22 @@ $(document).ready(function($) {
             $('#popup-explanation').text('You can only post and read with the reader option!')
         });
     
-    
-    
+    // Stop form submit if email or username already exists 
+    $('form#registration-form').one('submit', function myFormSubmitCallBack(e) {
+
+        e.stopPropagation();
+        e.preventDefault();
+        var $this = $(this);
+
+        if (($('#popup-user-confirmation').text().length == 0) && ($('#popup-email-confirmation').text().length == 0)) {
+
+            $this.submit();
+        }
+        else {
+            $this.one('submit', myFormSubmitCallBack);
+        }
+
+    });    
     
 });
 

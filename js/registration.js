@@ -19,21 +19,31 @@ $(document).ready(function($) {
                 console.log(response);
                 
                 if (response == 'taken') {
-                $('.popup-confirmation').text('Username exists, try another!');
+                $('#popup-confirmation').text('Username exists, try another!');
                     }
                 else {
-                    $('.popup-confirmation').text('');
-                }
-                // else {
-                //     if (response == 'not_taken') {
-            
-                //     $('.popup-explanation').remove();  
-                //     } 
-                // }  
-            })
+                    $('#popup-confirmation').text('');
+                    }
+            });
+    
         }
            
     });
+
+        // Popup for explanaion of users
+
+        $('.signup-form-poster').click(function(){
+    
+            $('#popup-explanation').text('You can post, view and comment with the poster option!')
+        });
+    
+        $('.signup-form-reader').click(function(){
+    
+            $('#popup-explanation').text('You can only post and read with the reader option!')
+        });
+    
+    
+    
     
 });
 

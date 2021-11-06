@@ -691,6 +691,22 @@ textarea.scroll::-webkit-scrollbar {
     float: left;
 }
 
+div#popup-explanation {
+    
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 1%;
+    margin-bottom: 2%;
+
+}
+
+div#popup-confirmation {
+
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 1%;
+}
+
 /* media queries */
 
 @media only screen
@@ -1266,15 +1282,16 @@ and (height: 812px) {
         text-align: left;
     }
     
-    .popup-explanation {
+    div#popup-explanation {
     
         color: red;
         font-size: 0.7rem;
         margin-top: 1%;
+        margin-bottom: 2%;
     
     }
 
-    div.popup-confirmation {
+    div#popup-confirmation {
 
         color: red;
         font-size: 0.7rem;

@@ -59,8 +59,8 @@
                                     <span class='text-reader-button'>Reader</span>
                                     <input class='signup-form signup-form-reader' type="radio" name="usertype" value="Reader" required='true'>
                                 </div>
-                                <div class='popup-explanation'></div>
-                                <div class='popup-confirmation'></div>
+                                <div id='popup-explanation'></div>
+                                <div id='popup-confirmation'></div>
                             </div>
                             <div class='line'>
                                 <hr class='horizontal-line' >

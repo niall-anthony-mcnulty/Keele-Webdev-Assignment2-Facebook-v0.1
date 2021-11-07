@@ -342,12 +342,11 @@ input, .submit-login:hover {
     margin-left: 0px;
     vertical-align: middle;
     display:flex;
-    width:800px;
     background-color:white;
     border-radius:6px;
-    height: auto;
-}
 
+    
+}
 
 .registration-title { 
 
@@ -642,24 +641,13 @@ textarea.scroll::-webkit-scrollbar {
 
   /* HOMEPAGE FEED */
 
-/* .homepage {
+.homepage {
 
     margin-top:3%;
     width:800px;
-    background-color:white;
-    border-radius:6px;
-    height: auto;
-} */
-
-.feed-rows {
-
-    margin-top:3%;
-    width:800px;
-    background-color:white;
     border-radius:6px;
     height: auto;
 }
-
 
 .feed-col {
 
@@ -687,7 +675,13 @@ textarea.scroll::-webkit-scrollbar {
     
 }
 
+.feed-rows {
 
+    
+    margin-bottom: 5%;
+    text-align: center;
+    justify-content: center
+}
 
 .table-feed {
 

@@ -36,7 +36,7 @@ require_once('includes/secure-login.php');
                 </div>
             </nav>
             <main class='container homepage'>
-                <div class='row justify-content-center no-gutters registration-row w-100'>
+                <div class='row justify-content-center no-gutters registration-row'>
                     <div class ='col-xs-12 col-sm-12 col-md-10 col-lg-10 registration-col'>
                         <form id='post-article' class='registration-submit-form feed' method="post"  autocomplete="off" required="true">
                             <h1 class='signup-text article-header'> Post</h1>
@@ -49,7 +49,7 @@ require_once('includes/secure-login.php');
                             </div>
                         </form>
                     </div>
-                <div class='row justify-content-center no-gutters registration-row w-100 feed-rows'>
+                <div class='row justify-content-center no-gutters registration-row feed-rows'>
                     <div class ='col-xs-12 col-sm-12 col-md-10 col-lg-10 registration-col feed-col'>
                         <div class='table-feed'>
                             <h1 class='signup-text article-header'> Feed </h1>

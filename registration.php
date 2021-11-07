@@ -16,7 +16,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">  
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src='js/registration.js'></script>
-    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
 </head>
 <body>
     <div class='wrapper'>
@@ -33,7 +32,7 @@
             <main class='container registration'>
                 <div class='row justify-content-center no-gutters registration-row'>
                     <div class ='col-xs-11 col-sm-11 col-md-11 col-lg-11 registration-col'>
-                        <form id='registration-form' class='registration-submit-form' method="post" action="registration-credentials.php" autocomplete="off" required="true">
+                        <form id='registration-form' class='registration-submit-form' method="post" action="php/registration-credentials.php" autocomplete="off" required="true">
                             <h1 class='signup-text'> Sign Up </h1>
                             <div class='name-wrapper'>
                                 <div class="registration-group first-name full-name">

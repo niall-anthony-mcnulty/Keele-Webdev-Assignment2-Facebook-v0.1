@@ -10,7 +10,7 @@ $(document).ready(function($) {
         
             $.ajax({
                 method: 'POST',
-                url: './check-username.php',
+                url: 'php/check-username.php',
                 data: {
                         'username': username,
                         },                    
@@ -39,7 +39,7 @@ $(document).ready(function($) {
         // ajax call to check whether email exists
             $.ajax({
                 method: 'POST',
-                url: './check-email.php',
+                url: 'php/check-email.php',
                 data: {
                         'email': userEmail,
                         },                    

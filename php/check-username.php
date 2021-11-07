@@ -1,17 +1,17 @@
 <?php 
 
-require 'includes/db-login.php';
+require '../includes/db-login.php';
 
 
 
-if (isset($_POST['email'])) {
+if (isset($_POST['username'])) {
     
     
-    $userEmail = $_POST['email'];
+    $username = $_POST['username'];
 
-    $sql = "SELECT email FROM users WHERE email=?";
+    $sql = "SELECT userName FROM users WHERE userName=?";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param('s',$userEmail);
+    $stmt->bind_param('s',$username);
     $stmt->execute();
 
     $rows = $stmt->fetch();

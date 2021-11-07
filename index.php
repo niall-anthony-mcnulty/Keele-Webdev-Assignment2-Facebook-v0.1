@@ -15,7 +15,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">  
     <script src='js/index.js' async></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
 </head>
 <body>
     <div class='wrapper'>
@@ -32,7 +31,7 @@
             <main class='container login login-width'>
                 <div class='row justify-content-center no-gutters main-row'>
                     <div class ='col-xs-11 col-sm-11 col-md-11 col-lg-11 main-col'>
-                        <form id='login-form' method="post" action="authenticate.php">
+                        <form id='login-form' method="post" action="php/login-credentials.php">
                             <div class="form-group">
                                 <input class="form-control" type="email" name="email" placeholder="Email">
                             </div>

@@ -13,8 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Bellota&family=Bellota+Text&display=swap" rel="stylesheet", type='text/css'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">  
-    <script src='js/index.js' async></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src='js/index.js'></script>
 </head>
 <body>
     <div class='wrapper'>
@@ -31,13 +31,13 @@
             <main class='container login login-width'>
                 <div class='row justify-content-center no-gutters main-row'>
                     <div class ='col-xs-11 col-sm-11 col-md-11 col-lg-11 main-col'>
-                        <form id='login-form' method="post" action="php/login-credentials.php">
+                        <form id='login-form' method="post" action="home.php">
                             <div class="form-group">
-                                <input class="form-control" type="email" name="email" placeholder="Email">
+                                <input class="form-control" id='email-auth' type="email" name="email" placeholder="Email" required>
                             </div>
 
                             <div class="form-group">
-                                <input class="form-control" type="password" name="password" placeholder="Password">
+                                <input class="form-control" id='password-auth' type="password" name="password" placeholder="Password" required>
                             </div>
 
                             <div class="form-submit">
@@ -47,6 +47,7 @@
                                 <hr class='horizontal-line' >
                             </div>
                         </form>
+                        <div class='bad-auth-pop'><p class= 'bad-authorisation-message'></p></div>
                         <div class="form-register">
                             <form method='post' action='registration.php'> 
                                 <input class='register-button' type="submit" name="register" value="Create Account">

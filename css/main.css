@@ -124,10 +124,12 @@ a:active { text-decoration: none; }
 
 .form-control {
 
+    font-family: 'Sora', Helvetica, Arial, Helvetica, sans-serif;
+    font-weight: lighter;
     margin-top: 3%;
     border-radius: 6px;
     height: 48px;
-    font-size: 1.2rem;
+    font-size: 1rem;
 
 }
 
@@ -226,7 +228,11 @@ input, .submit-login:hover {
 }
 
 
-.form-control:-webkit-autofill::first-line {
+.form-control:-webkit-autofill::first-line,
+.form-control:-webkit-autofill,
+.form-control:-webkit-autofill:hover,
+.form-control:-webkit-autofill:focus,
+.form-control:-webkit-autofill:active {
 
     font-family: 'Sora', Helvetica, Arial, Helvetica, sans-serif;
     font-weight: lighter;
@@ -750,6 +756,24 @@ p.registration-alert-unsuccessful {
     color: rgb(182, 24, 24)
 }
 
+.bad-authorisation-message {
+
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 1%;
+    text-align: center;
+    justify-content: center;
+}
+div.bad-auth-pop p {
+
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 1%;
+    text-align: center;
+    justify-content: center;
+
+}
+
 /* media queries */
 
 @media only screen
@@ -768,7 +792,11 @@ and (max-width: 299px){
         margin-bottom: 8%;
     }
 
-    .form-control:-webkit-autofill::first-line {
+    .form-control:-webkit-autofill::first-line,
+    .form-control:-webkit-autofill,
+    .form-control:-webkit-autofill:hover,
+    .form-control:-webkit-autofill:focus,
+    .form-control:-webkit-autofill:active  {
 
         font-family: 'Sora', Helvetica, Arial, Helvetica, sans-serif;
         font-weight: lighter;

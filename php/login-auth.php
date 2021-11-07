@@ -34,6 +34,8 @@ if ((isset($_POST['email'])) && (isset($_POST['password']))) {
             $_SESSION['type'] = $row[4]; 
             $_SESSION['loggedin'] = true;
             $_SESSION['id'] = session_id();
+            $_SESSION['ip'] = $_SERVER['REMOTE_ADDR'];
+            $_SESSION['loggin_time'] = time();            
 
             echo 'confirmed';
         }

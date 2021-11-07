@@ -31,7 +31,7 @@ require_once('includes/secure-login.php');
                             <a href='home.php' class='login-link registration-login-link'><img src='img/logo.png' alt='Friendzone logo' class='logo-pic homepage-logo' id='registration-pic'></a>
                         </div>
                         <div class ='col-xs-2 col-sm-2 col-md-2 col-lg-2 title-col title-registration-col homepage-col homepage-col-profile-link'><h4 class='profile-link'><a href='profile.php'>Profile</a></h4></div>
-                        <div class ='col-xs-2 col-sm-2 col-md-2 col-lg-2 title-col title-registration-col homepage-col homepage-col-signout-link'><h4 class='signout-link'><a href='index.php'>Sign Out</a></h4></div>
+                        <div class ='col-xs-2 col-sm-2 col-md-2 col-lg-2 title-col title-registration-col homepage-col homepage-col-signout-link'><h4 class='signout-link'><a href='includes/logout.php'>Sign Out</a></h4></div>
                     </div>
                 </div>
             </nav>
@@ -48,16 +48,15 @@ require_once('includes/secure-login.php');
                                 <!-- send to database and insert ajax response  -->
                             </div>
                         </form>
-                        <div class='feed-row w-100'>
-                            <div class ='col-xs-12 col-sm-12 col-md-10 col-lg-10 feed-col'>
-                                <div class='table-feed'>
-                                    <!-- insert all user feed here with ajax response-->
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
-                </div>   
+                <div class='row justify-content-center no-gutters registration-row w-100 feed-rows'>
+                    <div class ='col-xs-12 col-sm-12 col-md-10 col-lg-10 registration-col feed-col'>
+                        <div class='table-feed'>
+                            <h1 class='signup-text article-header'> Feed </h1>
+                                    <!-- insert all user feed here with ajax response-->
+                        </div>
+                    </div>
+                </div> 
             </main>
         </div>
     </div>

@@ -342,9 +342,12 @@ input, .submit-login:hover {
     margin-left: 0px;
     vertical-align: middle;
     display:flex;
-
-    
+    width:800px;
+    background-color:white;
+    border-radius:6px;
+    height: auto;
 }
+
 
 .registration-title { 
 
@@ -381,7 +384,7 @@ input:-webkit-autofill:active {
 .wrapper {
 
     
-    display: flex;
+    display: block;
     width: 100%;
 
 }
@@ -483,6 +486,7 @@ input:-webkit-autofill:active {
 
 
 /* HOMEPAGE - home.css*/
+
 
 
 /* navbar  */
@@ -638,7 +642,16 @@ textarea.scroll::-webkit-scrollbar {
 
   /* HOMEPAGE FEED */
 
-  .homepage {
+/* .homepage {
+
+    margin-top:3%;
+    width:800px;
+    background-color:white;
+    border-radius:6px;
+    height: auto;
+} */
+
+.feed-rows {
 
     margin-top:3%;
     width:800px;
@@ -647,6 +660,17 @@ textarea.scroll::-webkit-scrollbar {
     height: auto;
 }
 
+
+.feed-col {
+
+    margin-top:3%;
+    width:800px;
+    background-color:white;
+    border-radius:6px;
+    height: auto;
+
+}
+ 
 
 /* PROFILE PAGE */
 
@@ -663,13 +687,7 @@ textarea.scroll::-webkit-scrollbar {
     
 }
 
-.feed-row {
 
-    
-    margin-bottom: 5%;
-    text-align: center;
-    justify-content: center
-}
 
 .table-feed {
 
@@ -860,7 +878,7 @@ and (max-width: 299px){
     .wrapper {
 
     
-        display: flex;
+        display: block;
         width: 100%;
     
     }
@@ -898,7 +916,8 @@ and (max-width: 299px){
         width: 100%;
     }
     
-    
+
+
     .content-inside {
 
         width: 100%;
@@ -921,7 +940,7 @@ and (max-width: 299px){
     .wrapper {
 
     
-        display: flex;
+        display: block;
         width: 100%;
     
     }
@@ -1201,7 +1220,7 @@ and (height: 812px) {
     .wrapper {
 
     
-        display: flex;
+        display: block;
         width: 100%;
     
     }
@@ -1427,7 +1446,7 @@ and (orientation: landscape) {
     .wrapper {
 
     
-        display: flex;
+        display: block;
         width: 100%;
     
     }
@@ -1558,7 +1577,7 @@ and (orientation: portrait) {
     .wrapper {
 
     
-        display: flex;
+        display: block;
         width: 100%;
     
     }

@@ -1,26 +1,27 @@
 <?php 
-    // check session and use variables
-    require_once('../includes/secure-login.php');
-    // connect to db //
+// check session and use variables
+require_once('../includes/db-login.php');
+// connect to db //
+    
+    $content = $_REQUEST['content'];
+    $dates = $_REQUEST['date'];
+    $horse = $_REQUEST['horse'];
 
-    require_once('../includes/db-login.php');
-
-    $content = $_POST['content'];
-    $dates = $_POST['date'];
-    $username = $_SESSION['user-name'];
-    $ass = $_POST['ass'];
-
-
-    $stmt = $conn->prepare("INSERT INTO feed (userName, posts, dates) VAlUES (?,?,?)");
-    $stmt->bind_param("sss", $username, $content, $dates);
+    $stmt = $conn->prepare("INSERT INTO feed (posts, dates) VAlUES (?,?)");
+    $stmt->bind_param("ss", $content, $dates);
     
     if ($stmt->execute()) {
 
-        echo "success";
+        echo "confirmed";
     }
-           
+        
     else { 
-        echo "failed";
+        echo "unconfirmed";
         }
+    
+    
+
+
+    
 
 ?>

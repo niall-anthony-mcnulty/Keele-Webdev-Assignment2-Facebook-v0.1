@@ -1,3 +1,6 @@
+<?php 
+require_once('includes/secure-login.php');
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,8 +16,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Bellota&family=Bellota+Text&display=swap" rel="stylesheet", type='text/css'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com"> 
-    <script src='js/home.js' async></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
+    <script src='js/home.js' async></script>
 </head>
 <body>
     <div class='wrapper'>
@@ -23,7 +26,7 @@
                 <div class="container nav nav-registration homepage-nav">
                     <div class='row justify-content-center no-gutters title-row title-registration-row nav-homepage-row w-100'>
                         <div class ='col-xs-2 col-sm-2 col-md-2 col-lg-2 title-col title-registration-col homepage-col homepage-col-search'><img class='search-nav-icon' src='img/search.png'><input id='search-bar-nav' type='text' placeholder ='Search users' ></div>
-                        <div class ='col-xs-2 col-sm-2 col-md-2 col-lg-2 title-col title-registration-col homepage-col homepage-col-welcome'><h4 class='personalised-welcome-msg'> Welcome Niall</h4> </div>
+                        <div class ='col-xs-2 col-sm-2 col-md-2 col-lg-2 title-col title-registration-col homepage-col homepage-col-welcome'><h4 class='personalised-welcome-msg'>Hello <?php echo(explode(' ', trim($_SESSION['name'])))[0]?></h4></div>
                         <div class ='col-xs-4 col-sm-4 col-md-4 col-lg-4 title-col title-registration-col homepage-col homepage-col-logo'>
                             <a href='home.php' class='login-link registration-login-link'><img src='img/logo.png' alt='Friendzone logo' class='logo-pic homepage-logo' id='registration-pic'></a>
                         </div>

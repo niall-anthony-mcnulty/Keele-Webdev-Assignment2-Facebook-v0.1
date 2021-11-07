@@ -10,7 +10,7 @@ if ((isset($_POST['email'])) && (isset($_POST['password']))) {
     $userEmail = mysqli_real_escape_string($conn, $_POST['email']);
     $userPassword = mysqli_real_escape_string($conn, $_POST['password']);
 
-    $sql = "SELECT email, userPassword, userName FROM users WHERE email=?";
+    $sql = "SELECT * FROM users WHERE email=?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param('s',$userEmail);
     $stmt->execute();
@@ -26,7 +26,14 @@ if ((isset($_POST['email'])) && (isset($_POST['password']))) {
         $result ->close();
 
         # password matches confirm
-        if(password_verify($userPassword, $row[1])) {
+        if(password_verify($userPassword, $row[3])) {
+
+            session_start();
+            $_SESSION['user_name'] = $row[2];
+            $_SESSION['name'] = $row[1];
+            $_SESSION['type'] = $row[4]; 
+            $_SESSION['loggedin'] = true;
+            $_SESSION['id'] = session_id();
 
             echo 'confirmed';
         }

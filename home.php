@@ -38,13 +38,13 @@ require_once('includes/secure-login.php');
             <main class='container homepage'>
                 <div class='row justify-content-center no-gutters registration-row'>
                     <div class ='col-xs-12 col-sm-12 col-md-10 col-lg-10 registration-col'>
-                        <form id='post-article' class='registration-submit-form feed' method="post"  autocomplete="off" required="true">
-                            <h1 class='signup-text article-header'> Post</h1>
+                        <form id='post-article' class='registration-submit-form feed' method="POST"  action='php/send-post.php' autocomplete="off" required="true">
+                            <h1 class='signup-text article-header'> Post </h1>
                                 <textarea id='myThoughts' onkeyup="$(this).height(5);$(this).height($(this).prop('scrollHeight'))" form= 'post-article' placeholder="What's on your mind..." maxlength='300' minlength='1' ></textarea>
                                 <hr class='horizontal-line horizontal-line-post'>
                             </div>
                             <div class="form-register registration-group signup post-article-button" id='post-button-div' >
-                                <input class='register-button singup post-button' type="submit" name="post" value="Post">
+                                <input class='register-button singup post-button' type="submit" name="post" value="post">
                                 <!-- send to database and insert ajax response  -->
                             </div>
                         </form>
@@ -53,7 +53,11 @@ require_once('includes/secure-login.php');
                     <div class ='col-xs-12 col-sm-12 col-md-10 col-lg-10 registration-col feed-col'>
                         <div class='table-feed'>
                             <h1 class='signup-text article-header'> Feed </h1>
-                                    <!-- insert all user feed here with ajax response-->
+                                 <!-- insert all user feed here with ajax response-->
+                            <table class='table-each-post'>
+                                <tr class='table-row-content'></tr>
+                                <tr class='table-row-delete-edit-date'></tr>
+                            </table>
                         </div>
                     </div>
                 </div> 
@@ -67,6 +71,7 @@ require_once('includes/secure-login.php');
             </div>
         </div>
     </footer>
+    <script src='js/home.js' async></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>   
 </body>                                          

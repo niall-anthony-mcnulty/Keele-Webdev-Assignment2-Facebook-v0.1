@@ -1,4 +1,4 @@
-<?php 
+<?php
 require_once('includes/secure-login.php');
 ?>
 <!DOCTYPE html>
@@ -16,8 +16,8 @@ require_once('includes/secure-login.php');
     <link href="https://fonts.googleapis.com/css2?family=Bellota&family=Bellota+Text&display=swap" rel="stylesheet", type='text/css'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com"> 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
-    <script src='js/home.js' async></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src='js/home.js'></script>  
 </head>
 <body>
     <div class='wrapper'>
@@ -44,7 +44,7 @@ require_once('includes/secure-login.php');
                                 <hr class='horizontal-line horizontal-line-post'>
                             </div>
                             <div class="form-register registration-group signup post-article-button" id='post-button-div' >
-                                <button class='register-button singup post-button' type="submit" name="post" value="Post"> Button </button>
+                                <input class='register-button singup post-button' type="submit" name="post" value="Post">
                                 <!-- send to database and insert ajax response  -->
                             </div>
                         </form>

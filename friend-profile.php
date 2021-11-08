@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com"> 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src='js/profile.js'></script>  
+    <script src='js/home.js'></script>  
 </head>
 <body>
     <div class='wrapper'>

@@ -794,9 +794,33 @@ div.bad-auth-pop p {
 h1.article-header {
 
     margin-bottom: 5%;
-
-
 }
+
+.table-row-userName {
+
+    width: 20%;
+}
+
+.date-post {
+
+    width: 20%;
+}
+
+.edit-post {
+
+    width: 20%;
+}
+
+.delete-post {
+
+    width: 20%
+}
+
+.date-comment {
+
+    width: 20%
+}
+
 .table-each-post {
 
     width: 100%;
@@ -817,9 +841,7 @@ h1.article-header {
     width: 100%;
     font-size: 100%;
     color: black;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
+    
     
     
 }
@@ -831,13 +853,16 @@ tbody.all_posts {
     border-color: rgb(212, 209, 209);
     border-style: solid;
     border-width: 1px;
-    margin-top: 5px;
-    border-collapse: separate;
-    border-spacing: 15px;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
     
+}
+
+tr.table-row-content {
+    width: 100%;
+    column-span: all;
+    column-width: 100%;
+    justify-content:center;
+    align-items: center;
+    text-align:center;
 
 }
 

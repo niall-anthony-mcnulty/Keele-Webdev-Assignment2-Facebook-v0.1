@@ -26,7 +26,7 @@ $(document).ready(function() {
                 var post_content = output[i]['posts'];
                 var post_date = output[i]['postDate'];
             
-                table_contents = ("<tbody class='all_posts'><tr class='table-row-content'><td class='post-content'>" + post_content + "</td></tr><tr class='table-row-options'><td class='table-row-userName'>" + post_user + "</td><td class='date-post'>" + post_date + "</td><td class='edit-post'>Edit</td><td class='detele-post'>Delete</td><td class='date-comment'>Comment</td></tr></tbody>");
+                table_contents = ("<tbody class='all_posts'><tr class='table-row-content'><th class='feed-header'>" + post_content + "</th></tr><tr class='table-row-options'><td class='table-row-userName'>" + post_user + "</td><td class='date-post'>" + post_date + "</td><td class='edit-post'>Edit</td><td class='detele-post'><button class='delete-button' type='button'>Delete</button></td><td class='date-comment'>Comment</td></tr></tbody>");
                 $('table.table-each-post').append(table_contents);
             
                 $('.myThoughts').val('');
@@ -60,10 +60,25 @@ $(document).ready(function() {
             var post_content = output[i]['posts'];
             var post_date = output[i]['postDate'];
         
-            table_contents = ("<tbody class='all_posts'><tr class='table-row-content'><td class='post-content'>" + post_content + "</td></tr><tr class='table-row-options'><td class='table-row-userName'>" + post_user + "</td><td class='date-post'>" + post_date + "</td><td class='edit-post'>Edit</td><td class='detele-post'>Delete</td><td class='date-comment'>Comment</td></tr></tbody>");
+            table_contents = ("<tbody class='all_posts'><tr class='table-row-content'><th class='feed-header'>" + post_content + "</th></tr><tr class='table-row-options'><td class='table-row-userName'>" + post_user + "</td><td class='date-post'>" + post_date + "</td><td class='edit-post'>Edit</td><td class='detele-post'><button class='delete-button' type='button'>Delete</button></td><td class='date-comment'>Comment</td></tr></tbody>");
             $('table.table-each-post').append(table_contents);
 
             };
         });
 
 })
+
+// $(document).ready(function() {
+
+//     $(".delete-button").on("click", function() {
+
+        
+//         $.ajax({
+//             method: "POST",
+//             url: 'php/delete-post.php',
+//             dataType: 'json',
+//             data: {
+
+//             }
+//         }).done((output) => {
+

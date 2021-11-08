@@ -1,32 +1,26 @@
 <?php 
 // check session and use variables
-require_once('../includes/db-login.php');
+require ('../includes/secure-login.php');
+require ('../includes/db-login.php');
 // connect to db //
     
 $content = $_REQUEST['content'];
-$date = '05/09/1988';
+$dates = date("Y-m-d");
+$user = $_SESSION['user_name'];
 
-// $stmt = $conn->prepare("INSERT INTO feed (posts) VAlUES (?)");
-// $stmt->bind_param("s", $content);
+// echo json_encode(array('content' => $content, 'user' => $user, 'dates' => $dates));
+// paramterise 
+$stmt = $conn->prepare("INSERT INTO feed (userName, posts, postDate) VALUES (?,?,?)");
+$stmt->bind_param("sss", $user, $content, $dates);
 
-$sql = "INSERT INTO feed (userName, posts, date) VALUES ('johnny','$content','$date')";
-// if ($stmt->execute()) {
 
-// echo "confirmed";
-// }
+if ($stmt->execute()){
     
-// else { 
-//     echo "unconfirmed";
-    // }
-
-if (mysqli_query($conn, $sql))
-{
-    echo json_encode(array("sql" => $sql));
+    echo "confirmed";
 }
     
-else {
-        echo json_encode(array('sql_error' => mysqli_error($conn) ));
-};
+else { 
+    echo "unconfirmed";
+    }
 
-mysqli_close($conn);
 ?>

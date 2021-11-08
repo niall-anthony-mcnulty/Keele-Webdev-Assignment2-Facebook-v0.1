@@ -55,8 +55,9 @@ require_once('includes/secure-login.php');
                             <h1 class='signup-text article-header'> Feed </h1>
                                  <!-- insert all user feed here with ajax response-->
                             <table class='table-each-post'>
+                                <tr class='table-row-userName'></tr>
                                 <tr class='table-row-content'></tr>
-                                <tr class='table-row-delete-edit-date'></tr>
+                                <tr class='table-row-options'><td class='edit-post'>Edit</td><td class='detele-post'>Delete</td><td class='date-post'>Date:</tr> 
                             </table>
                         </div>
                     </div>

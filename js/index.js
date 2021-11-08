@@ -34,8 +34,9 @@ $(document).ready(function($) {
             $this.one('submit', myFormSubmitCallBack);
             }
         
-        });
+        })
 
    });
+
 
 });

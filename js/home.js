@@ -29,9 +29,20 @@ $(document).ready(function() {
             }
 
         });
+        
 
     });
  
+    $.ajax({
+        method: 'POST',
+        url: 'php/get-posts.php',
+        dataType: 'json'
+    }).done((data) => {
+
+        console.log(data);
+
+    });
+
 });
 
 // $(document).ready(function() {

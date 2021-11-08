@@ -788,6 +788,29 @@ div.bad-auth-pop p {
 
 }
 
+/* TABLES */
+
+
+h1.article-header {
+
+    margin-bottom: 5%;
+
+
+}
+table.table-each-post {
+
+    width: 100%;
+
+}
+.table-row-options {
+
+    width: 100%;
+}
+
+tbody {
+
+    width: 100%;
+}
 /* media queries */
 
 @media only screen

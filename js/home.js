@@ -1,46 +1,44 @@
-$(document).ready(function($) {
+$(document).ready(function() {
 
     // Stop form submit if the authentication fails
-    $('#post-article-feed').submit((e) => {
+    $('#post-article-feed').submit(function (e) {
 
 
-            e.preventDefault();
+        e.preventDefault();
 
-            var content = $('#myThoughts').val();
+        var content = $('#myThoughts').val();
 
 
-            // ajax call to check if password and email match in database 
-            $.ajax({
-                method: 'POST',
-                url: 'php/send-post.php',
-                data: {
-                    'content': content,
-                },
-            }).done((response) => {
+        // ajax call to check if password and email match in database 
+        $.ajax({
+            method: 'POST',
+            url: 'php/send-post.php',
+            data: {
+                'content': content,
+            },
+        }).done((response) => {
 
-                if (response == 'confirmed') {
+            if (response == 'confirmed') {
 
-                    console.log(response);
-                    $('#myThoughts').val('');
-                }
-
-                else {
-
-                    console.log(response);
-                    $('#myThoughts').val('');
-                }
-
-            });
+                console.log(response);
+                $('#myThoughts').val('');
+            }
+            else {
+                console.log(response);
+                $('#myThoughts').val('');           
+            }
 
         });
- 
- });
 
-$(document).ready(function() {
-    
-    $('#myThoughts').on('input', function() {
-        $('#myThoughts').height = "5px";
-        $('#myThoughts').height = ($('#myThoughts').scrollHeight)+"px";
     });
-
+ 
 });
+
+// $(document).ready(function() {
+    
+//     $('#myThoughts').on('input', function() {
+//         $('#myThoughts').height = "5px";
+//         $('#myThoughts').height = ($('#myThoughts').scrollHeight)+"px";
+//     });
+
+// });

@@ -596,6 +596,7 @@ div.homepage-nav {
 .horizontal-line-post {
 
     margin-top:0;
+    border: 0;
 }
 
 .homepage-logo {
@@ -621,6 +622,7 @@ input#myThoughts {
     width: 100%;
     border: none;
     color: black;
+
     
 }
 
@@ -1106,6 +1108,7 @@ and (max-width: 299px){
     .horizontal-line-post {
     
         margin-top:0;
+        border-top:0;
     }
     
     .homepage-logo {

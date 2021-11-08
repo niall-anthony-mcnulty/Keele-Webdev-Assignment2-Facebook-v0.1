@@ -797,20 +797,52 @@ h1.article-header {
 
 
 }
-table.table-each-post {
+.table-each-post {
 
     width: 100%;
+    
+    border-spacing: 2px;
 
 }
+
 .table-row-options {
 
     width: 100%;
+    font-size: 70%;
+
 }
 
-tbody {
+.table-row-content{
 
     width: 100%;
+    font-size: 100%;
+    color: black;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    
+    
 }
+
+tbody.all_posts {
+
+    width: 100%;
+    border-radius: 10px;
+    border-color: rgb(212, 209, 209);
+    border-style: solid;
+    border-width: 1px;
+    margin-top: 5px;
+    border-collapse: separate;
+    border-spacing: 15px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+
+
 /* media queries */
 
 @media only screen

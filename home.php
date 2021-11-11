@@ -51,11 +51,10 @@ require_once('includes/secure-login.php');
                     </div>
                 <div class='row justify-content-center no-gutters registration-row feed-rows'>
                     <div class ='col-xs-12 col-sm-12 col-md-10 col-lg-10 registration-col feed-col'>
-                        <div class='table-feed'>
-                            <h1 class='signup-text article-header'> Feed </h1>
+                        <h1 class='signup-text article-header'> Feed </h1>    
+                        <div class='feed-contents'>
+                            
                                  <!-- insert all user feed here with ajax response-->
-                            <table class='table-each-post'>
-                            </table>
                         </div>
                     </div>
                 </div> 

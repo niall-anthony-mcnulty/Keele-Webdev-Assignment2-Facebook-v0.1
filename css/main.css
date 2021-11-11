@@ -653,14 +653,115 @@ textarea.scroll::-webkit-scrollbar {
 
 .feed-col {
 
-    margin-top:3%;
-    width:800px;
-    background-color:white;
-    border-radius:6px;
-    height: auto;
+    margin-bottom: 5%;
+    background-color: none;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+}
 
+div.feed-rows {
+
+    background-color: none;
+    margin-top: 3%;
+    
+}
+
+
+.feed_blocks {
+
+    border: 1px;
+    border-color: white;
+    border-style: solid;
+    border-collapse: separate;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    background-color: white;
+    font-family:Helvetica, sans-serif;
+    height:auto;
+    overflow:hidden;
+    display:flex;
+    flex-direction: column;
+   
 }
  
+.post-user {
+
+    color: black;
+    text-align: left;
+    justify-content:left;
+    font-size: 90%;
+    font-family:  Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.post-date {
+
+    color: black;
+    text-align: left;
+    justify-content:left;
+    font-size: 80%;
+    font-family: Helvetica, sans-serif;
+
+}
+
+.edit-post {
+
+    color: black; 
+    text-align:left;
+    justify-content:left;
+    font-size: 95%;
+    margin-left: 2%;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    float:left;
+    margin-top: 3%;
+}
+
+.delete-post {
+
+    color: black;
+    text-align:right;
+    justify-content:right;
+    font-size: 95%;
+    font-family:Helvetica, sans-serif;
+
+}
+
+button {
+
+    color: black; 
+    float: right;
+    text-align:right;
+    justify-content:right;
+    font-size: 95%;
+    margin-top: 2%;
+    margin-right: 2%;
+  
+
+}
+
+#individual-posts {
+
+    font-size: 100%;
+    color: black;
+    text-align: left;
+    margin-top: 2%;
+    
+}
+
+.comment-forms {
+
+    width: 100%;
+}
+
+.input-comment {
+
+    width: 80%;
+
+    
+}
 
 /* PROFILE PAGE */
 
@@ -787,86 +888,6 @@ div.bad-auth-pop p {
     justify-content: center;
 
 }
-
-/* TABLES */
-
-
-h1.article-header {
-
-    margin-bottom: 5%;
-}
-
-.table-row-userName {
-
-    width: 20%;
-}
-
-.date-post {
-
-    width: 20%;
-}
-
-.edit-post {
-
-    width: 20%;
-}
-
-.delete-post {
-
-    width: 20%
-}
-
-.date-comment {
-
-    width: 20%
-}
-
-.table-each-post {
-
-    width: 100%;
-    
-    border-spacing: 2px;
-
-}
-
-.table-row-options {
-
-    width: 100%;
-    font-size: 70%;
-
-}
-
-.table-row-content{
-
-    width: 100%;
-    font-size: 100%;
-    color: black;
-    
-    
-    
-}
-
-tbody.all_posts {
-
-    width: 100%;
-    border-radius: 10px;
-    border-color: rgb(212, 209, 209);
-    border-style: solid;
-    border-width: 1px;
-    
-}
-
-tr.table-row-content {
-    width: 100%;
-    column-span: all;
-    column-width: 100%;
-    justify-content:center;
-    align-items: center;
-    text-align:center;
-
-}
-
-
 
 /* media queries */
 

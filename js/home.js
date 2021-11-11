@@ -32,15 +32,15 @@ $(document).ready(function() {
                 var post_content = output[i]['posts'];
                 var post_date = output[i]['postDate'];
                 var post_id = output[i]['post_id'];
-                
+               
                 if (session_user == post_user) {
 
-                    feed_contents = ("<div class='user_post_" + post_id + "'>" + post_content + "<span class='user-plus-date'> Post by " + post_user + " at " + post_date + "</span><span class='edit-post'>Edit</span><span class='detele-post'><button scriptclass='delete-button' id='delete-button-"+ post_id + "'" + "type='button'>Delete</button></span></div>");
+                    feed_contents = ("<div class='feed_blocks'><div class='post-user'>" + post_user + "</div><div class='post-date'>" + post_date + "</div><div id='individual-posts' class='user_post_" + post_id + "'>" + post_content + "</div><div class='edit-delete-container'><span class='edit-post'>Edit</span><span class='detele-post'><button class='delete-button' id='delete-button-"+ post_id + "'" + "type='button'>Delete</button></span></div><div class= 'comment-container'><form class='comment-forms'><input class='input-comment' type='text'></form></div></div>");
                     $('.feed-contents').append(feed_contents);
                 }
                 else {
                     
-                    feed_contents = ("<div class='user_post_" + post_id + "'>" + post_content + "<span class='user-plus-date'> Post by " + post_user + " at " + post_date + "</span></div>");
+                    feed_contents = ("<div class='feed_blocks'><div class='post-user'>" + post_user + "</div><div class='post-date'>" + post_date + "</div><div id='individual-posts' class='user_post_" + post_id + "'>" + post_content + "</div><div class='comment-container'><form class='comment-forms'><input class='input-comment' type='text'></form></div></div>");
                     $('.feed-contents').append(feed_contents);
                 };
             
@@ -66,14 +66,15 @@ $(document).ready(function() {
 
                 if (session_user == post_user) {
 
-                    feed_contents = ("<div class='user_post_" + post_id + "'>" + post_content + "<span class='user-plus-date'> Post by " + post_user + " at " + post_date + "</span><span class='edit-post'>Edit</span><span class='detele-post'><button scriptclass='delete-button' id='delete-button-"+ post_id + "'" + "type='button'>Delete</button></span></div>");
+                    feed_contents = ("<div class='feed_blocks'><div class='post-user'>" + post_user + "</div><div class='post-date'>" + post_date + "</div><div id='individual-posts' class='user_post_" + post_id + "'>" + post_content + "</div><div class='edit-delete-container'><span class='edit-post'>Edit</span><span class='detele-post'><button class='delete-button' id='delete-button-"+ post_id + "'" + "type='button'>Delete</button></span></div><div class= 'comment-container'><form class='comment-forms'><input class='input-comment' type='text'></form></div></div>");
                     $('.feed-contents').append(feed_contents);
                 }
                 else {
                     
-                    feed_contents = ("<div class='user_post_" + post_id + "'>" + post_content + "<span class='user-plus-date'> Post by " + post_user + " at " + post_date + "</span></div>");
+                    feed_contents = ("<div class='feed_blocks'><div class='post-user'>" + post_user + "</div><div class='post-date'>" + post_date + "</div><div id='individual-posts' class='user_post_" + post_id + "'>" + post_content + "</div><div class='comment-container'><form class='comment-forms'><input class='input-comment' type='text'></form></div></div>");
                     $('.feed-contents').append(feed_contents);
                 };
+                
         
                 $('#myThoughts').val('');
 

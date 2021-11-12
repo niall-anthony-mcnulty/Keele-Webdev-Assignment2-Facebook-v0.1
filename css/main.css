@@ -524,7 +524,7 @@ input:-webkit-autofill:active {
     padding-right: 25px;
     border-color:none;
     border:none;
-    font-size: 100%;
+    font-size: 90%;
 
 }
 
@@ -537,8 +537,11 @@ input:-webkit-autofill:active {
 }
 /* outlines */
 
-#search-bar-nav:focus{
-    outline-style:none
+
+.homepage-col-search:hover { 
+
+    border-color: #719ECE;
+    box-shadow: 0 0 10px #719ECE;
 }
 
 /* placeholder tex color */
@@ -646,7 +649,7 @@ textarea.scroll::-webkit-scrollbar {
 .homepage {
 
     margin-top:3%;
-    width:800px;
+    width:60%;
     border-radius:6px;
     height: auto;
 }
@@ -699,46 +702,39 @@ div.feed-rows {
 .post-date {
 
     color: black;
-    text-align: left;
-    justify-content:left;
     font-size: 80%;
     font-family: Helvetica, sans-serif;
-
+ 
 }
 
 .edit-post {
 
     color: black; 
-    text-align:left;
-    justify-content:left;
     font-size: 95%;
-    margin-left: 2%;
     font-family: Helvetica, sans-serif;
-    font-weight: bold;
-    float:left;
-    margin-top: 3%;
+    font-weight: bold; 
+
+}
+
+.post-delete-edit-container {
+
+    margin: 0px;
+    width: 100%;
+
 }
 
 .delete-post {
 
     color: black;
-    text-align:right;
-    justify-content:right;
     font-size: 95%;
     font-family:Helvetica, sans-serif;
-
+    
 }
 
 button {
 
     color: black; 
-    float: right;
-    text-align:right;
-    justify-content:right;
     font-size: 95%;
-    margin-top: 2%;
-    margin-right: 2%;
-  
 
 }
 

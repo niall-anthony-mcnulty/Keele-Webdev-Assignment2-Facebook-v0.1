@@ -734,6 +734,12 @@ div.feed-rows {
       
 }
 
+.delete-button:hover {
+
+    text-decoration: underline;
+
+  }
+
 button {
 
     all: unset;

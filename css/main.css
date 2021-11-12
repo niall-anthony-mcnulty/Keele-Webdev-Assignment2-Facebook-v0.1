@@ -790,10 +790,12 @@ button {
     background-color: rgb(240,242,245);
     border-radius: 1rem;
     height: auto;
+    width: 100%;
     padding-top: 10px;
     margin-bottom: 5px;
-    margin-left: 10%;
+    margin-left: 3%;
     margin-right: 10%;
+    float:right;
     
     
 }
@@ -836,8 +838,21 @@ textarea.scroll::-webkit-scrollbar {
 .input-comment {
 
     width: 80%;
+  
+}
 
+.comment-logo {
+
+    height: 50px;
+    width: 50px;
+    margin-left: 7%;
     
+}
+
+.individual-comments {
+
+    display:flex;
+    width: 100%
 }
 
 /* PROFILE PAGE */

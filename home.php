@@ -40,7 +40,7 @@ require_once('includes/secure-login.php');
                     <div class ='col-xs-12 col-sm-12 col-md-10 col-lg-10 registration-col'>
                         <form id='post-article-feed' name= 'post-article' class='registration-submit-form feed' method="post" autocomplete="off" required="true">
                             <h1 class='signup-text article-header'>  </h1>
-                                <textarea id='myThoughts' onkeyup="$(this).height(5);$(this).height($(this).prop('scrollHeight'))" form='post-article' placeholder="What's on your mind..." maxlength='300' minlength='1' ></textarea>
+                                <textarea id='myThoughts' onkeyup="$(this).height(5);$(this).height($(this).prop('scrollHeight'))" form='post-article' placeholder="What's on your mind, <?php echo explode(' ', $_SESSION['name'])[0]?>?" maxlength='300' minlength='1' ></textarea>
                                 <hr class='horizontal-line horizontal-line-post'>
                             </div>
                             <div class="form-register registration-group signup post-article-button" id='post-button-div' >

@@ -211,7 +211,7 @@ input, .register-button:hover {
 }
 
 
-input, .submit-login:hover {
+ input, input.submit-login:hover {
     background-color: rgb(11, 77, 170) ;
 }
 
@@ -520,6 +520,7 @@ input:-webkit-autofill:active {
 #search-bar-nav {
 
     width: 80%;
+    outline:none;
     background: none;
     padding-right: 25px;
     border-color:none;
@@ -618,13 +619,14 @@ div.homepage-nav {
 
 /* Thoughts */
 
-input#myThoughts {
+#myThoughts {
 
     background:none;
     outline: none;
     width: 100%;
     border: none;
     color: black;
+    
 
     
 }
@@ -649,7 +651,7 @@ textarea.scroll::-webkit-scrollbar {
 .homepage {
 
     margin-top:3%;
-    width:60%;
+    width:45%;
     border-radius:6px;
     height: auto;
 }
@@ -686,25 +688,62 @@ div.feed-rows {
     overflow:hidden;
     display:flex;
     flex-direction: column;
+    padding: 2.5%;
+    
    
 }
  
+.post-delete-edit-container {
+
+    margin: 0px;
+    width: 100%;
+    vertical-align:bottom;
+    line-height: 20px;
+
+}
+
 .post-user {
 
     color: black;
     text-align: left;
     justify-content:left;
-    font-size: 90%;
+    font-size: 110%;
     font-family:  Helvetica, sans-serif;
     font-weight: bold;
+
 }
 
 .post-date {
 
     color: black;
-    font-size: 80%;
+    font-size: 90%;
     font-family: Helvetica, sans-serif;
+    float:left;
+    vertical-align:bottom;
  
+}
+
+
+.delete-post {
+
+    color: black;
+    font-size: 95%;
+    font-family:Helvetica, sans-serif;
+    float:right;
+    vertical-align:bottom;
+      
+}
+
+button {
+
+    all: unset;
+    color: black; 
+    font-size: 95%;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold; 
+    float:right;
+    vertical-align: bottom;
+
 }
 
 .edit-post {
@@ -713,28 +752,10 @@ div.feed-rows {
     font-size: 95%;
     font-family: Helvetica, sans-serif;
     font-weight: bold; 
-
-}
-
-.post-delete-edit-container {
-
-    margin: 0px;
-    width: 100%;
-
-}
-
-.delete-post {
-
-    color: black;
-    font-size: 95%;
-    font-family:Helvetica, sans-serif;
+    float:right;
+    margin-left: 6px;
+    margin-right: 3px;
     
-}
-
-button {
-
-    color: black; 
-    font-size: 95%;
 
 }
 
@@ -747,10 +768,70 @@ button {
     
 }
 
+.thumbsup {
+
+    height: 20px;
+    width: 20px;
+    float:left;
+}
+
+.comment-icon {
+
+    height: 20px;
+    width: 20px;
+    float:right;
+}
+
 .comment-forms {
 
-    width: 100%;
+    margin-bottom: 0;
+    align-items: left;
+    text-align: left;
+    background-color: rgb(240,242,245);
+    border-radius: 1rem;
+    height: auto;
+    padding-top: 10px;
+    margin-bottom: 5px;
+    margin-left: 10%;
+    margin-right: 10%;
+    
+    
 }
+
+.input-comment {
+
+    width: 100%;
+    outline:none;
+    background: none;
+    padding-right: 25px;
+    border-color:none;
+    border:none;
+    font-size: 90%;
+    margin-left: 2%;
+    
+}
+
+
+textarea {
+
+    resize: none;
+    overflow:hidden;
+    height: 25px;
+    width: 100%;
+    border: none;
+    margin-bottom: 0;
+}
+
+
+textarea.scroll::-webkit-scrollbar {
+    display: none;
+  }
+
+.comment-line-break {
+
+    border-top: 1px solid grey;
+}
+
 
 .input-comment {
 

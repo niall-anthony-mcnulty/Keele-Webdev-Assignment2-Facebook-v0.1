@@ -32,15 +32,15 @@ $(document).ready(function() {
                 var post_content = output[i]['posts'];
                 var post_date = output[i]['postDate'];
                 var post_id = output[i]['post_id'];
-               
+                
                 if (session_user == post_user) {
 
-                    feed_contents = ("<div class='feed_blocks'><div class='post-user'>" + post_user + "</div><div class='post-delete-edit-container'>" + "<span class='post-date'>" + post_date + "</span><span class='edit-post'>Edit</span><span class='detele-post'><button class='delete-button' id='delete-button-"+ post_id + "'" + "type='button'>Delete</button></div><div id='individual-posts' class='user_post_" + post_id + "'>" + post_content + "</div><hr><hr><div class='comment-container'><div class='individual-comments'><form class='comment-forms'><input class='input-comment' type='text'></form></div></div></div>");
+                    feed_contents = ("<div class='feed_blocks'><div class='post-user'>" + post_user + "</div><div class='post-delete-edit-container'>" + "<span class='post-date'>" + post_date + "</span><span class='edit-post'>Edit</span><span class='detele-post'><button class='delete-button' id='delete-button-"+ post_id + "'" + "type='button'>Delete</button></div><div id='individual-posts' class='user_post_" + post_id + "'>" + post_content + "</div><hr class='comment-line-break'><div class='icons'><img class='thumbsup' src='img/like.png'><img class='comment-icon' src='img/comment.png'></div><hr class='comment-line-break'><div class='comment-container'><div class='individual-comments'><form class='comment-forms'><textarea id='myComment' class='input-comment' onkeyup=" + "$(this).height(5);$(this).height($(this).prop('scrollHeight'))" + " placeholder='Write a comment...' maxlength='300' minlength='1' ></textarea></form></div></div></div>");
                     $('.feed-contents').append(feed_contents);
                 }
                 else {
                     
-                    feed_contents = ("<div class='feed_blocks'><div class='post-user'>" + post_user + "</div><div class='post-date'>" + "<span class='post-date'>" + post_date + "/span></div><div id='individual-posts' class='user_post_" + post_id + "'>" + post_content + "</div><hr><hr><div class='comment-container'><div class='individual-comments'><form class='comment-forms'><input class='input-comment' type='text'></form></div></div></div>");
+                    feed_contents = ("<div class='feed_blocks'><div class='post-user'>" + post_user + "</div><div class='post-date'>" + "<span class='post-date'>" + post_date + "/span></div><div id='individual-posts' class='user_post_" + post_id + "'>" + post_content + "</div><hr class='comment-line-break'><div class='icons'><img class='thumbsup' src='img/like.png'><img class='comment-icon' src='img/comment.png'></div><hr class='comment-line-break'><div class='comment-container'><div class='individual-comments'><form class='comment-forms'><textarea id='myComment' class='input-comment' onkeyup=" + "$(this).height(5);$(this).height($(this).prop('scrollHeight'))" + " placeholder='Write a comment...' maxlength='300' minlength='1' ></textarea></form></div></div></div>");
                     $('.feed-contents').append(feed_contents);
                 };
                 
@@ -64,18 +64,17 @@ $(document).ready(function() {
                 var post_content = output[i]['posts'];
                 var post_date = output[i]['postDate'];
                 var post_id = output[i]['post_id'];
+                
                 if (session_user == post_user) {
 
-                    feed_contents = ("<div class='feed_blocks'><div class='post-user'>" + post_user + "</div><div class='post-delete-edit-container'>" + "<span class='post-date'>" + post_date + "</span><span class='edit-post'>Edit</span><span class='detele-post'><button class='delete-button' id='delete-button-"+ post_id + "'" + "type='button'>Delete</button></div><div id='individual-posts' class='user_post_" + post_id + "'>" + post_content + "</div><hr><hr><div class='comment-container'><div class='individual-comments'><form class='comment-forms'><input class='input-comment' type='text'></form></div></div></div>");
+                    feed_contents = ("<div class='feed_blocks'><div class='post-user'>" + post_user + "</div><div class='post-delete-edit-container'>" + "<span class='post-date'>" + post_date + "</span><span class='edit-post'>Edit</span><span class='detele-post'><button class='delete-button' id='delete-button-"+ post_id + "'" + "type='button'>Delete</button></div><div id='individual-posts' class='user_post_" + post_id + "'>" + post_content + "</div><hr class='comment-line-break'><div class='icons'><img class='thumbsup' src='img/like.png'><img class='comment-icon' src='img/comment.png'></div><hr class='comment-line-break'><div class='comment-container'><div class='individual-comments'><form class='comment-forms'><textarea id='myComment' class='input-comment' onkeyup=" + "$(this).height(5);$(this).height($(this).prop('scrollHeight'))" + " placeholder='Write a comment...' maxlength='300' minlength='1' ></textarea></form></div></div></div>");
                     $('.feed-contents').append(feed_contents);
                 }
                 else {
                     
-                    feed_contents = ("<div class='feed_blocks'><div class='post-user'>" + post_user + "</div><div class='post-date'>" + "<span class='post-date'>" + post_date + "/span></div><div id='individual-posts' class='user_post_" + post_id + "'>" + post_content + "</div><hr><hr><div class='comment-container'><div class='individual-comments'><form class='comment-forms'><input class='input-comment' type='text'></form></div></div></div>");
+                    feed_contents = ("<div class='feed_blocks'><div class='post-user'>" + post_user + "</div><div class='post-date'>" + "<span class='post-date'>" + post_date + "/span></div><div id='individual-posts' class='user_post_" + post_id + "'>" + post_content + "</div><hr class='comment-line-break'><div class='icons'><img class='thumbsup' src='img/like.png'><img class='comment-icon' src='img/comment.png'></div><hr class='comment-line-break'><div class='comment-container'><div class='individual-comments'><form class='comment-forms'><textarea id='myComment' class='input-comment' onkeyup=" + "$(this).height(5);$(this).height($(this).prop('scrollHeight'))" + " placeholder='Write a comment...' maxlength='300' minlength='1' ></textarea></form></div></div></div>");
                     $('.feed-contents').append(feed_contents);
                 };
-        
-                $('#myThoughts').val('');
 
             };
         });
@@ -120,6 +119,17 @@ $(document).ready(function() {
     $('#myThoughts').on('input', function() {
         $('#myThoughts').height = "5px";
         $('#myThoughts').height = ($('#myThoughts').scrollHeight)+"px";
+    });
+
+});
+
+// ALLOW TEXTAREA TO EXPAND //
+
+$(document).ready(function() {
+
+    $('#myComment').on('input', function() {
+        $('#myComment').height = "5px";
+        $('#myComment').height = ($('#myComment').scrollHeight)+"px";
     });
 
 });

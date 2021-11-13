@@ -33,7 +33,7 @@ require_once('includes/secure-login.php');
                                else {?> 
                                <a href='home.php' id = 'user-avatar-nav-img' class='login-link registration-login-link'><img src='img/logo.png' alt='Friendzone logo' class='logo-pic-profile-nav' ></a> <?php ;}?>
                         </div>
-                        <div class ='col-xs-2 col-sm-2 col-md-2 col-lg-2 title-col title-registration-col homepage-col homepage-col-profile-link'><h4 class='profile-link'><a href='profile.php'>Profile</a></h4></div>
+                        <div class ='col-xs-2 col-sm-2 col-md-2 col-lg-2 title-col title-registration-col homepage-col homepage-col-profile-link'><h4 class='profile-link'><a href='profile.php?username=<?php $_SESSION['user_name'] ?>'>Profile</a></h4></div>
                         <div class ='col-xs-2 col-sm-2 col-md-2 col-lg-2 title-col title-registration-col homepage-col homepage-col-signout-link'><h4 class='signout-link'><a href='includes/logout.php'>Sign Out</a></h4></div>
                     </div>
                     <hr class='top-horizontal-nav'>

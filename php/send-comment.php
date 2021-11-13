@@ -4,22 +4,24 @@ require ('../includes/secure-login.php');
 require ('../includes/db-login.php');
 // connect to db //
 
-$content = $_REQUEST['content'];
+$comment = $_REQUEST['comment'];
 $session_user = $_SESSION['user_name'];
+$session_type = $_SESSION['type'];
+$post_id = $_REQUEST['post-id'];
+
 
 // paramterise 
-$stmt = $conn->prepare("INSERT INTO feed (userName, posts) VALUES (?,?)");
-$stmt->bind_param('ss', $session_user, $content);
+$stmt = $conn->prepare("INSERT INTO comments (post_id, comment, userName) VALUES (?,?,?)");
+$stmt->bind_param('sss', $post_id, $comment, $session_user);
 $stmt->execute();
 
-// add session-user 
 
-// send back to update feed
-$sql = "SELECT post_id, userName, posts, postDate FROM feed ORDER BY post_id DESC";
+// send back to comments to feed
+$sql = "SELECT comment_id, post_id, comment, userName, commentDate FROM comments WHERE post_id = $post_id ORDER BY commentDate DESC";
 
 $result = mysqli_query($conn, $sql);
 
-$output = array('session-user'=>$session_user);
+$output = array();
 while($data = mysqli_fetch_assoc($result)) {
 
     $output[] = $data;

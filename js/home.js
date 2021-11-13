@@ -37,7 +37,7 @@ $(document).ready(function() {
                 
                 if (session_user == post_user) {
 
-                    feed_contents = ("<div class='feed_blocks'><div class='post-user'>" + post_user + "</div><div class='post-delete-edit-container'>" + "<span class='post-date'>" + post_date + "</span><span class='edit-post'>Edit</span><span class='detele-post'><button class='delete-button' id='delete-button-"+ post_id + "'" + "type='button'>Delete</button></div><div id='individual-posts' class='user_post_" + post_id + "'>" + post_content + "</div><hr class='comment-line-break'><div class='icons'><img class='thumbsup' src='img/like.png'><img alt='logo next comment input' class='comment-icon' src='img/comment.png'></div><hr class='comment-line-break'><div class='comment-container'><div class='individual-comments'><div class='user-comments-each'></div><img class='comment-logo' src='img/logo.png'><form class='comment-forms'><fieldset><textarea id='myComment' class='input-comment' onkeyup=" + "$(this).height(5);$(this).height($(this).prop('scrollHeight'))" + " placeholder='Write a comment...' maxlength='300' minlength='1' ></textarea></fieldset></form></fieldset></div></div></div>");
+                    feed_contents = ("<div class='feed_blocks'><div class='post-user'>" + post_user + "</div><div class='post-delete-edit-container'>" + "<span class='post-date'>" + post_date + "</span><span class='edit-post'>Edit</span><span class='detele-post'><button class='delete-button' id='delete-button-"+ post_id + "'" + "type='button'>Delete</button></div><div id='individual-posts' class='user_post_" + post_id + "'>" + post_content + "</div><hr class='comment-line-break'><div class='icons'><img class='thumbsup' src='img/like.png'><img alt='logo next comment input' class='comment-icon' src='img/comment.png'></div><hr class='comment-line-break'><div class='comment-container'><div class='returned-comments-" + post_id +"'></div><div class='individual-comments'><img class='comment-logo' src='img/logo.png'><form id = 'comment-forms-" +post_id + "' class='comment-forms'><fieldset><textarea id = 'input-comment-" + post_id + "' class='input-comment' onkeyup=" + "$(this).height(5);$(this).height($(this).prop('scrollHeight'))" + " placeholder='Write a comment...' maxlength='300' minlength='1' ></textarea></fieldset></form></fieldset></div></div></div>");
                     $('.feed-contents').append(feed_contents);
 
                     if (user_type == 'Reader') {
@@ -52,7 +52,7 @@ $(document).ready(function() {
                 }
                 else {
                     
-                    feed_contents = ("<div class='feed_blocks'><div class='post-user'>" + post_user + "</div><div class='post-date'>" + "<span class='post-date'>" + post_date + "</span></div><div id='individual-posts' class='user_post_" + post_id + "'>" + post_content + "</div><hr class='comment-line-break'><div class='icons'><img class='thumbsup' src='img/like.png'><img class='comment-icon' src='img/comment.png'></div><hr class='comment-line-break'><div class='comment-container'><div class='individual-comments'><div class='user-comments-each'></div><img class='comment-logo' src='img/logo.png'><form class='comment-forms'><fieldset><textarea id='myComment' class='input-comment' onkeyup=" + "$(this).height(5);$(this).height($(this).prop('scrollHeight'))" + " placeholder='Write a comment...' maxlength='300' minlength='1' ></textarea></fieldset></form></div></div></div>");
+                    feed_contents = ("<div class='feed_blocks'><div class='post-user'>" + post_user + "</div><div class='post-date'>" + "<span class='post-date'>" + post_date + "</span></div><div id='individual-posts' class='user_post_" + post_id + "'>" + post_content + "</div><hr class='comment-line-break'><div class='icons'><img class='thumbsup' src='img/like.png'><img class='comment-icon' src='img/comment.png'></div><hr class='comment-line-break'><div class='comment-container'><div class='returned-comments-" + post_id +"'></div><div class='individual-comments'><img class='comment-logo' src='img/logo.png'><form id = 'comment-forms-" +post_id + "' class='comment-forms'><fieldset><textarea id = 'input-comment-" + post_id + "' class='input-comment' onkeyup=" + "$(this).height(5);$(this).height($(this).prop('scrollHeight'))" + " placeholder='Write a comment...' maxlength='300' minlength='1' ></textarea></fieldset></form></div></div></div>");
                     $('.feed-contents').append(feed_contents);
 
                     if (user_type == 'Reader') {
@@ -91,9 +91,10 @@ $(document).ready(function() {
                 var post_id = output[i]['post_id'];
                 
                 if (session_user == post_user) {
-                    
-                    feed_contents = ("<div class='feed_blocks'><div class='post-user'>" + post_user + "</div><div class='post-delete-edit-container'>" + "<span class='post-date'>" + post_date + "</span><span class='edit-post'>Edit</span><span class='detele-post'><button class='delete-button' id='delete-button-"+ post_id + "'" + "type='button'>Delete</button></div><div id='individual-posts' class='user_post_" + post_id + "'>" + post_content + "</div><hr class='comment-line-break'><div class='icons'><img class='thumbsup' src='img/like.png'><img alt='logo next comment input' class='comment-icon' src='img/comment.png'></div><hr class='comment-line-break'><div class='comment-container'><div class='individual-comments'><div class='user-comments-each'></div><img class='comment-logo' src='img/logo.png'><form class='comment-forms'><fieldset><textarea id='myComment' class='input-comment' onkeyup=" + "$(this).height(5);$(this).height($(this).prop('scrollHeight'))" + " placeholder='Write a comment...' maxlength='300' minlength='1' ></textarea></fieldset></form></fieldset></div></div></div>");
+
+                    feed_contents = ("<div class='feed_blocks'><div class='post-user'>" + post_user + "</div><div class='post-delete-edit-container'>" + "<span class='post-date'>" + post_date + "</span><span class='edit-post'>Edit</span><span class='detele-post'><button class='delete-button' id='delete-button-"+ post_id + "'" + "type='button'>Delete</button></div><div id='individual-posts' class='user_post_" + post_id + "'>" + post_content + "</div><hr class='comment-line-break'><div class='icons'><img class='thumbsup' src='img/like.png'><img alt='logo next comment input' class='comment-icon' src='img/comment.png'></div><hr class='comment-line-break'><div class='comment-container'><div class='returned-comments-" + post_id +"'></div><div class='individual-comments'><img class='comment-logo' src='img/logo.png'><form id = 'comment-forms-" +post_id + "' class='comment-forms'><fieldset><textarea id = 'input-comment-" + post_id + "' class='input-comment' onkeyup=" + "$(this).height(5);$(this).height($(this).prop('scrollHeight'))" + " placeholder='Write a comment...' maxlength='300' minlength='1' ></textarea></fieldset></form></fieldset></div></div></div>");
                     $('.feed-contents').append(feed_contents);
+
                     if (user_type == 'Reader') {
 
                         $('fieldset').attr("disabled","disabled");
@@ -106,7 +107,7 @@ $(document).ready(function() {
                 }
                 else {
                     
-                    feed_contents = ("<div class='feed_blocks'><div class='post-user'>" + post_user + "</div><div class='post-date'>" + "<span class='post-date'>" + post_date + "</span></div><div id='individual-posts' class='user_post_" + post_id + "'>" + post_content + "</div><hr class='comment-line-break'><div class='icons'><img class='thumbsup' src='img/like.png'><img class='comment-icon' src='img/comment.png'></div><hr class='comment-line-break'><div class='comment-container'><div class='individual-comments'><div class='user-comments-each'></div><img class='comment-logo' src='img/logo.png'><form class='comment-forms'><fieldset><textarea id='myComment' class='input-comment' onkeyup=" + "$(this).height(5);$(this).height($(this).prop('scrollHeight'))" + " placeholder='Write a comment...' maxlength='300' minlength='1' ></textarea></fieldset></form></div></div></div>");
+                    feed_contents = ("<div class='feed_blocks'><div class='post-user'>" + post_user + "</div><div class='post-date'>" + "<span class='post-date'>" + post_date + "</span></div><div id='individual-posts' class='user_post_" + post_id + "'>" + post_content + "</div><hr class='comment-line-break'><div class='icons'><img class='thumbsup' src='img/like.png'><img class='comment-icon' src='img/comment.png'></div><hr class='comment-line-break'><div class='comment-container'><div class='returned-comments-" + post_id +"'></div><div class='individual-comments'><img class='comment-logo' src='img/logo.png'><form id = 'comment-forms-" +post_id + "' class='comment-forms'><fieldset><textarea id = 'input-comment-" + post_id + "' class='input-comment' onkeyup=" + "$(this).height(5);$(this).height($(this).prop('scrollHeight'))" + " placeholder='Write a comment...' maxlength='300' minlength='1' ></textarea></fieldset></form></div></div></div>");
                     $('.feed-contents').append(feed_contents);
 
                     if (user_type == 'Reader') {
@@ -124,58 +125,6 @@ $(document).ready(function() {
 })
 
 // <<<------------------------------------------------------------------->>> //
-
-// DELETE POST VIA DELETE BUTTON
-
-
-$(document).on('click', '.delete-button' ,function(e) {
-
-    // e.preventDefault();
-
-    var class_name = $(this).attr('id');
-    var post_id = class_name.split('-').pop();
-    
-
-
-    $.ajax({
-        method: "POST",
-        url: 'php/delete-post.php',
-        dataType: 'json',
-        data: { 'post-id' : post_id},
-    }).done((output) => {
-
-        console.log(output);
-        $(this).parent().parent().remove();
-
-    });
-});
-  
-
-
-
-// <<<------------------------------------------------------------------->>> //
-
-// ALLOW TEXTAREA TO EXPAND //
-
-$(document).ready(function() {
-
-    $('#myThoughts').on('input', function() {
-        $('#myThoughts').height = "5px";
-        $('#myThoughts').height = ($('#myThoughts').scrollHeight)+"px";
-    });
-
-});
-
-// ALLOW TEXTAREA TO EXPAND //
-
-$(document).ready(function() {
-
-    $('#myComment').on('input', function() {
-        $('#myComment').height = "5px";
-        $('#myComment').height = ($('#myComment').scrollHeight)+"px";
-    });
-
-});
 
 // SEND TEXTAREA BY ENTER
 
@@ -218,11 +167,11 @@ $(document).ready(function() {
                     
                     if (session_user == post_user) {
 
-                        feed_contents = ("<div class='feed_blocks'><div class='post-user'>" + post_user + "</div><div class='post-delete-edit-container'>" + "<span class='post-date'>" + post_date + "</span><span class='edit-post'>Edit</span><span class='detele-post'><button class='delete-button' id='delete-button-"+ post_id + "'" + "type='button'>Delete</button></div><div id='individual-posts' class='user_post_" + post_id + "'>" + post_content + "</div><hr class='comment-line-break'><div class='icons'><img class='thumbsup' src='img/like.png'><img alt='logo next comment input' class='comment-icon' src='img/comment.png'></div><hr class='comment-line-break'><div class='comment-container'><div class='individual-comments'><div class='user-comments-each'></div><img class='comment-logo' src='img/logo.png'><form class='comment-forms'><fieldset><textarea id='myComment' class='input-comment' onkeyup=" + "$(this).height(5);$(this).height($(this).prop('scrollHeight'))" + " placeholder='Write a comment...' maxlength='300' minlength='1' ></textarea></fieldset></form></fieldset></div></div></div>");
+                        feed_contents = ("<div class='feed_blocks'><div class='post-user'>" + post_user + "</div><div class='post-delete-edit-container'>" + "<span class='post-date'>" + post_date + "</span><span class='edit-post'>Edit</span><span class='detele-post'><button class='delete-button' id='delete-button-"+ post_id + "'" + "type='button'>Delete</button></div><div id='individual-posts' class='user_post_" + post_id + "'>" + post_content + "</div><hr class='comment-line-break'><div class='icons'><img class='thumbsup' src='img/like.png'><img alt='logo next comment input' class='comment-icon' src='img/comment.png'></div><hr class='comment-line-break'><div class='comment-container'><div class='returned-comments-" + post_id +"'></div><div class='individual-comments'><img class='comment-logo' src='img/logo.png'><form id = 'comment-forms-" +post_id + "' class='comment-forms'><fieldset><textarea id = 'input-comment-" + post_id + "' class='input-comment' onkeyup=" + "$(this).height(5);$(this).height($(this).prop('scrollHeight'))" + " placeholder='Write a comment...' maxlength='300' minlength='1' ></textarea></fieldset></form></fieldset></div></div></div>");
                         $('.feed-contents').append(feed_contents);
-
+    
                         if (user_type == 'Reader') {
-
+    
                             $('fieldset').attr("disabled","disabled");
                             $('.input-comment').attr("placeholder", "Reader's can't comment...Sorry!")
                         }
@@ -233,11 +182,11 @@ $(document).ready(function() {
                     }
                     else {
                         
-                        feed_contents = ("<div class='feed_blocks'><div class='post-user'>" + post_user + "</div><div class='post-date'>" + "<span class='post-date'>" + post_date + "</span></div><div id='individual-posts' class='user_post_" + post_id + "'>" + post_content + "</div><hr class='comment-line-break'><div class='icons'><img class='thumbsup' src='img/like.png'><img class='comment-icon' src='img/comment.png'></div><hr class='comment-line-break'><div class='comment-container'><div class='individual-comments'><div class='user-comments-each'></div><img class='comment-logo' src='img/logo.png'><form class='comment-forms'><fieldset><textarea id='myComment' class='input-comment' onkeyup=" + "$(this).height(5);$(this).height($(this).prop('scrollHeight'))" + " placeholder='Write a comment...' maxlength='300' minlength='1' ></textarea></fieldset></form></div></div></div>");
+                        feed_contents = ("<div class='feed_blocks'><div class='post-user'>" + post_user + "</div><div class='post-date'>" + "<span class='post-date'>" + post_date + "</span></div><div id='individual-posts' class='user_post_" + post_id + "'>" + post_content + "</div><hr class='comment-line-break'><div class='icons'><img class='thumbsup' src='img/like.png'><img class='comment-icon' src='img/comment.png'></div><hr class='comment-line-break'><div class='comment-container'><div class='returned-comments-" + post_id +"'></div><div class='individual-comments'><img class='comment-logo' src='img/logo.png'><form id = 'comment-forms-" +post_id + "' class='comment-forms'><fieldset><textarea id = 'input-comment-" + post_id + "' class='input-comment' onkeyup=" + "$(this).height(5);$(this).height($(this).prop('scrollHeight'))" + " placeholder='Write a comment...' maxlength='300' minlength='1' ></textarea></fieldset></form></div></div></div>");
                         $('.feed-contents').append(feed_contents);
-
+    
                         if (user_type == 'Reader') {
-
+    
                             $('fieldset').attr("disabled","disabled");
                             $('.input-comment').attr("placeholder", "Reader's can't comment...Sorry!")
                         }
@@ -257,28 +206,106 @@ $(document).ready(function() {
 
 // <<<------------------------------------------------------------------->>> //
 // SEND FEED COMMENTS & RETRIEVE //
+
+
 $(document).ready(function() {
 
-    // Stop form submit if the authentication fails
-    $('.comment-forms').on('keydown',function (e) {
+        
+    $('body').on('keydown', '.input-comment', function(e) {
+        // Get the code of pressed key
+        
+        const keyCode = e.which || e.keyCode;
 
-        if(e.keyCode == 13) {
-
-            var comment = $('#myComment').val();
+        // 13 represents the Enter key
+        if (keyCode === 13 && !e.shiftKey) {
+            // Don't generate a new line
+            console.log($(this).val());
+            e.preventDefault();
+            
+            var comment = $(this).val();
+            var class_name = $(this).parent().parent().attr('id');
+            var post_id = class_name.split('-').pop();
+            console.log(post_id);
 
             // send comment 
             $.ajax({
                 method: 'POST',
                 url: 'php/send-comment.php',
                 data: {
+                    'post-id': post_id,
                     'comment': comment,
                 },
                 dataType: 'json',
             }).done((output) => {
                 // empty feed
                 console.log(output);
+                for (var i=0; i<(Object.keys(output).length); i++) {
+                    var comment_id = output[i]['comment_id'];
+                    var post_id = output[i]['post_id'];
+                    var comment = output[i]['comment'];
+                    var userName = output[i]['userName'];
+                    var commentDate = output[i]['commentDate'];
+                    
+                    comments_content = ("<div class='individual-comment-container-each'><div class='comment-name-container'><div class='individual-comment-user'>" + userName + "</div><div class='comment-comment'>" + comment + "</div></div><span class='individual-comment-date'>" + commentDate + "</span></div>" );
+                    $('.returned-comments-' + post_id).append(comments_content);
+                
+                };
             });
+
         };
+
     });
 });
+
  
+// <<<------------------------------------------------------------------->>> //
+
+// DELETE POST VIA DELETE BUTTON
+
+
+$(document).on('click', '.delete-button' ,function(e) {
+
+    // e.preventDefault();
+
+    var class_name = $(this).attr('id');
+    var post_id = class_name.split('-').pop();
+    
+
+
+    $.ajax({
+        method: "POST",
+        url: 'php/delete-post.php',
+        dataType: 'json',
+        data: { 'post-id' : post_id},
+    }).done((output) => {
+
+        console.log(output);
+        $(this).parent().parent().remove();
+
+    });
+});
+
+// <<<------------------------------------------------------------------->>> //
+
+// ALLOW TEXTAREA TO EXPAND //
+
+$(document).ready(function() {
+
+    $('#myThoughts').on('input', function() {
+        $('#myThoughts').height = "5px";
+        $('#myThoughts').height = ($('#myThoughts').scrollHeight)+"px";
+    });
+
+});
+
+// ALLOW TEXTAREA TO EXPAND //
+
+$(document).ready(function() {
+
+    $('#myComment').on('input', function() {
+        $('#myComment').height = "5px";
+        $('#myComment').height = ($('#myComment').scrollHeight)+"px";
+    });
+
+});
+  

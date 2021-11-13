@@ -500,8 +500,6 @@ input:-webkit-autofill:active {
     font-size: 130%;
     
 
-
-
 }
 
 .homepage-col-search {
@@ -525,7 +523,7 @@ input:-webkit-autofill:active {
     padding-right: 25px;
     border-color:none;
     border:none;
-    font-size: 90%;
+    font-size: 95%;
 
 }
 
@@ -536,6 +534,47 @@ input:-webkit-autofill:active {
     height: 20px;
     width: auto;
 }
+
+/* SEARCH BAR in NAV */
+
+.user-names-list {
+    color: black;
+    font-size: 90%;
+    text-decoration: none;
+    margin-top: 13%;
+
+}
+
+.user-names-list-link {
+
+    color: black;
+    font-size: 110%;
+    text-decoration: none;
+}
+
+ol, ul {
+
+    padding-left: 0rem;
+    
+}
+
+#user-friends {
+
+    list-style-type: none;
+    padding-left: none;
+    
+}
+
+.search-line {
+
+    border-top: 1px solid grey;
+    width: 80%;
+    float:left;
+    margin-top:0;
+}
+
+
+
 /* outlines */
 
 
@@ -562,8 +601,9 @@ input:-webkit-autofill:active {
 
 .search-nav-icon {
 
-    width: 25px;
+    width: 28px;
     height: auto;
+    float:right;
     
 }
 
@@ -613,7 +653,16 @@ div.homepage-nav {
 .nav-homepage-row {
 
     width: 100%;
-    border-bottom: 2px solid rgb(223,223,223);
+    
+}
+
+.top-horizontal-nav {
+
+    border-bottom: 2px solid grey;
+    width: 90%;
+    margin-left: 3.2%;
+    margin-right: 5%;
+    margin-top: 0%;
 }
 
 

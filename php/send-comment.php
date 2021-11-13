@@ -3,10 +3,9 @@
 require ('../includes/secure-login.php');
 require ('../includes/db-login.php');
 // connect to db //
-    
+
 $content = $_REQUEST['content'];
 $session_user = $_SESSION['user_name'];
-$session_type = $_SESSION['type'];
 
 // paramterise 
 $stmt = $conn->prepare("INSERT INTO feed (userName, posts) VALUES (?,?)");
@@ -20,7 +19,7 @@ $sql = "SELECT post_id, userName, posts, postDate FROM feed ORDER BY post_id DES
 
 $result = mysqli_query($conn, $sql);
 
-$output = array('session-user'=>$session_user, 'session-type'=>$session_type);
+$output = array('session-user'=>$session_user);
 while($data = mysqli_fetch_assoc($result)) {
 
     $output[] = $data;

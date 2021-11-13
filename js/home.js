@@ -126,7 +126,7 @@ $(document).ready(function() {
 
 // <<<------------------------------------------------------------------->>> //
 
-// SEND TEXTAREA BY ENTER
+// SEND FEED TEXTAREA BY ENTER
 
 $(document).ready(function() {
 
@@ -139,6 +139,7 @@ $(document).ready(function() {
             // Don't generate a new line
             e.preventDefault();
 
+            
             var content = $('#myThoughts').val();
 
 
@@ -205,7 +206,7 @@ $(document).ready(function() {
 });
 
 // <<<------------------------------------------------------------------->>> //
-// SEND FEED COMMENTS & RETRIEVE //
+// SEND FEED COMMENTS & RETRIEVE ON ENTER//
 
 
 $(document).ready(function() {
@@ -219,7 +220,6 @@ $(document).ready(function() {
         // 13 represents the Enter key
         if (keyCode === 13 && !e.shiftKey) {
             // Don't generate a new line
-            console.log($(this).val());
             e.preventDefault();
             
             var comment = $(this).val();
@@ -238,7 +238,7 @@ $(document).ready(function() {
                 dataType: 'json',
             }).done((output) => {
                 // empty feed
-                console.log(output);
+                $('.feed-contents').empty();
                 for (var i=0; i<(Object.keys(output).length); i++) {
                     var comment_id = output[i]['comment_id'];
                     var post_id = output[i]['post_id'];
@@ -256,6 +256,35 @@ $(document).ready(function() {
 
     });
 });
+// BRING UP COMMENTS ON PAGE LOAD //
+
+$(document).ready(function() {
+
+        
+    
+    // send comment 
+    $.ajax({
+        method: 'POST',
+        url: 'php/get-comment.php',
+        dataType: 'json',
+    }).done((output) => {
+        // empty feed
+        console.log(output);
+        for (var i=0; i<(Object.keys(output).length); i++) {
+            var post_id = output[i]['post_id'];
+            var comment = output[i]['comment'];
+            var userName = output[i]['userName'];
+            var commentDate = output[i]['commentDate'];
+            
+            comments_content = ("<div class='individual-comment-container-each'><div class='comment-name-container'><div class='individual-comment-user'>" + userName + "</div><div class='comment-comment'>" + comment + "</div></div><span class='individual-comment-date'>" + commentDate + "</span></div>" );
+            $('.returned-comments-' + post_id).append(comments_content);
+        
+        };
+    });
+
+});
+
+
 
  
 // <<<------------------------------------------------------------------->>> //

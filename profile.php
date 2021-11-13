@@ -1,3 +1,6 @@
+<?php
+require_once('includes/secure-login.php');
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,14 +25,18 @@
             <nav>
                 <div class="container nav nav-registration homepage-nav">
                     <div class='row justify-content-center no-gutters title-row title-registration-row nav-homepage-row w-100'>
-                        <div class ='col-xs-2 col-sm-2 col-md-2 col-lg-2 title-col title-registration-col homepage-col homepage-col-search'><img class='search-nav-icon' src='img/search.png'><input id='search-bar-nav' type='text' placeholder ='Search users' ></div>
-                        <div class ='col-xs-2 col-sm-2 col-md-2 col-lg-2 title-col title-registration-col homepage-col homepage-col-welcome'><h4 class='personalised-welcome-msg'> Welcome Niall</h4> </div>
-                        <div id ='user-avatar-nav' class ='col-xs-4 col-sm-4 col-md-4 col-lg-4 title-col title-registration-col homepage-col homepage-col-logo'>
-                            <a href='home.php' id = 'user-avatar-nav-img' class='login-link registration-login-link'><img src='img/ric.jpeg' alt='Friendzone logo' class='logo-pic-profile-nav' ></a>
+                        <div class ='col-xs-2 col-sm-2 col-md-2 col-lg-2 title-col title-registration-col homepage-col homepage-col-search'><form><img class='search-nav-icon' src='img/search.png'><input id='search-bar-nav' type='text' placeholder ='Search users' ></form><ul id='user-friends'></ul></div>
+                        <div class ='col-xs-2 col-sm-2 col-md-2 col-lg-2 title-col title-registration-col homepage-col homepage-col-welcome'><h4 class='personalised-welcome-msg'>Hello <?php echo(explode(' ', trim($_SESSION['name'])))[0]?></h4></div>
+                        <div class ='col-xs-4 col-sm-4 col-md-4 col-lg-4 title-col title-registration-col homepage-col homepage-col-logo'>
+                            <?php if ($_SESSION['user_name'] == 'McNugget') { ?>
+                               <a href='home.php' id = 'user-avatar-nav-img' class='login-link registration-login-link'><img src='img/ric.jpeg' alt='Friendzone logo' class='logo-pic-profile-nav' ></a> <?php ;}
+                               else {?> 
+                               <a href='home.php' id = 'user-avatar-nav-img' class='login-link registration-login-link'><img src='img/logo.png' alt='Friendzone logo' class='logo-pic-profile-nav' ></a> <?php ;}?>
                         </div>
                         <div class ='col-xs-2 col-sm-2 col-md-2 col-lg-2 title-col title-registration-col homepage-col homepage-col-profile-link'><h4 class='profile-link'><a href='profile.php'>Profile</a></h4></div>
-                        <div class ='col-xs-2 col-sm-2 col-md-2 col-lg-2 title-col title-registration-col homepage-col homepage-col-signout-link'><h4 class='signout-link'><a href='index.php'>Sign Out</a></h4></div>
+                        <div class ='col-xs-2 col-sm-2 col-md-2 col-lg-2 title-col title-registration-col homepage-col homepage-col-signout-link'><h4 class='signout-link'><a href='includes/logout.php'>Sign Out</a></h4></div>
                     </div>
+                    <hr class='top-horizontal-nav'>
                 </div>
             </nav>
             <main class='container homepage'>

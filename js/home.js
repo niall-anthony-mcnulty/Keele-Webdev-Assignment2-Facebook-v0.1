@@ -81,7 +81,6 @@ $(document).ready(function() {
         dataType: 'json'
     }).done((output) => {
         $('.feed-contents').empty()
-        console.log(output)
         var session_user = output['session-user'];
         var user_type = output['session-type'];
             for (var i=0; i<(Object.keys(output).length)-2; i++) {
@@ -226,6 +225,7 @@ $(document).ready(function() {
             var class_name = $(this).parent().parent().attr('id');
             var post_id = class_name.split('-').pop();
             console.log(post_id);
+            $('.returned-comments-' + post_id).empty();
 
             // send comment 
             $.ajax({
@@ -238,7 +238,7 @@ $(document).ready(function() {
                 dataType: 'json',
             }).done((output) => {
                 // empty feed
-                $('.feed-contents').empty();
+                $('.returned-comments-' + post_id).empty();
                 for (var i=0; i<(Object.keys(output).length); i++) {
                     var comment_id = output[i]['comment_id'];
                     var post_id = output[i]['post_id'];
@@ -250,6 +250,7 @@ $(document).ready(function() {
                     $('.returned-comments-' + post_id).append(comments_content);
                 
                 };
+                $('.input-comment').val('');
             });
 
         };
@@ -269,7 +270,6 @@ $(document).ready(function() {
         dataType: 'json',
     }).done((output) => {
         // empty feed
-        console.log(output);
         for (var i=0; i<(Object.keys(output).length); i++) {
             var post_id = output[i]['post_id'];
             var comment = output[i]['comment'];

@@ -41,19 +41,26 @@ require_once('includes/secure-login.php');
             </nav>
             <main class='container homepage'>
                 <div class='row justify-content-center no-gutters registration-row w-100'>
-                    <div class ='col-xs-12 col-sm-12 col-md-10 col-lg-10 registration-col'>  
-                        <div class='bio-grid'>  
-                            <h1 class='bio-h1'> Bio</h1>
-                            <h4 class='add-bio'><a href='add-bio.php'> add </a></h4>
-                            <h4 class='edit-bio'><a href='edit0bio.php'> edit </a></h4>
+                    <div id ='profile-col-bio' class ='col-xs-12 col-sm-12 col-md-12 col-lg-12 registration-col'>  
+                        <div class='intro-grid'>  
+                            <div class='intro-form'>
+                                <div class='edit-header-container'>
+                                    <h1 class='bio-h1'> Intro</h1>
+                                    <div class='bio-edit'><button id='edit-bio-button' class='edit-bio-link' type='button'>Edit</button></div>
+                                </div>
+                                <div class ='hidden-container' id='hidden-container-intro'>
+                                 <!-- form or bio appended here -->
+                                </div>
+                            </div>   
                         </div>      
                     </div>
                 </div>
+                <?php if($_GET['username'] == $_SESSION['user_name']) { ?>
                 <div class='row justify-content-center no-gutters registration-row'>
                     <div class ='col-xs-12 col-sm-12 col-md-10 col-lg-10 registration-col'>
                         <form id='post-article-feed' name= 'post-article' class='registration-submit-form feed' method="post" autocomplete="off" required="true">
                             <h1 class='signup-text article-header'>  </h1>
-                                <textarea id='myThoughts' onkeyup="$(this).height(5);$(this).height($(this).prop('scrollHeight'))" form='post-article' placeholder="What's on your mind, <?php echo explode(' ', $_GET['name'])[0]?>?" maxlength='300' minlength='1' ></textarea>
+                                <textarea id='myThoughts-profile' onkeyup="$(this).height(5);$(this).height($(this).prop('scrollHeight'))" form='post-article' placeholder="What's on your mind, <?php echo explode(' ', $_GET['name'])[0]?>?" maxlength='300' minlength='1' ></textarea>
                                 <hr class='horizontal-line horizontal-line-post'>
                             </div>
                             <div class="form-register registration-group signup post-article-button" id='post-button-div' >
@@ -61,7 +68,9 @@ require_once('includes/secure-login.php');
                                 <!-- send to database and insert ajax response  -->
                             </div>
                         </form>
-                    </div>
+                    </div><?php } else {
+                        
+                    } ?>
                 <div id = 'feed-row' class='row justify-content-center no-gutters feed-rows'>
                     <div class ='col-xs-12 col-sm-12 col-md-10 col-lg-10 registration-col feed-col'>
                         <!-- <h1 class='signup-text article-header'> Feed </h1>     -->

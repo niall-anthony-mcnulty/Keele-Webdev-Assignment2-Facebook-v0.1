@@ -1018,6 +1018,300 @@ input.comment-submit {
 
 /* PROFILE PAGE */
 
+/* bio */
+
+/* Chrome, Safari, Edge, Opera */
+input#mobile-bio::-webkit-outer-spin-button,
+input#mobile-bio::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+
+}
+
+div.edit-header-container {
+
+    display:flex;
+}
+
+.bio-h1 {
+
+    margin-bottom: 3%;
+    margin-top: 3%;
+    flex: 1;
+    width: 80%;
+    text-align:left;
+    justify-content: left;
+    margin-left: 8.2%;
+}
+
+.bio-edit {
+
+    float: right;
+    font-size: 100%;
+    color: black;
+    margin-top: 5%;
+
+}
+
+#edit-bio-button:hover {
+
+    text-decoration: underline;
+
+  }
+
+/* name */
+.full-name-hidden {
+
+    display:flex;
+    width:60%;
+}
+
+.name-hidden-full {
+
+    margin-bottom: 3%;
+    margin-top: 3%;
+    flex: 1;
+    width: 25%;
+    text-align:right;
+    justify-content: right;
+    margin-left: 3.5%;
+    font-size: 1rem;
+    color:black;
+    text-decoration: underline;
+}
+
+.variable-fullname {
+
+    margin-bottom: 2.8%;
+    margin-top: 2.2%;
+    flex: 2;
+    width: 35%;
+    text-align:left;
+    justify-content: left;
+    margin-left: 2%;
+    font-size: 1.2rem;
+
+}
+
+/* mobile no. */
+
+.mobile-hidden {
+
+    display:flex;
+    width: 60%;
+}
+
+.mobile-hidden-full {
+
+    margin-bottom: 3%;
+    margin-top: 3%;
+    flex: 1;
+    width: 25%;
+    text-align:right;
+    justify-content: right;
+    margin-left: 3.5%;
+    font-size: 1rem;
+    color:black;
+    text-decoration: underline;
+
+}
+
+.variable_mobile {
+
+    margin-bottom: 2.8%;
+    margin-top: 2.2%;
+    flex: 2;
+    width: 35%;
+    text-align:left;
+    justify-content: left;
+    margin-left: 2%;
+    font-size: 1.2rem; 
+}
+
+.sex-hidden {
+    
+    display:flex;
+    width: 60%;
+
+}
+
+.sex_hidden_full {
+
+    margin-bottom: 3%;
+    margin-top: 3%;
+    flex: 1;
+    width: 25%;
+    text-align:right;
+    justify-content: right;
+    margin-left: 3.5%;
+    font-size: 1rem;
+    color:black;
+    text-decoration: underline;
+}
+
+.variable_radio {
+
+    margin-bottom: 2.8%;
+    margin-top: 2.2%;
+    flex: 2;
+    width: 35%;
+    text-align:left;
+    justify-content: left;
+    margin-left: 2%;
+    font-size: 1.2rem; 
+
+}
+
+.nationality-hidden {
+
+    display:flex;
+    width: 60%;
+}
+
+.nationality_hidden_full {
+
+    margin-bottom: 3%;
+    margin-top: 3%;
+    flex: 1;
+    width: 25%;
+    text-align:right;
+    justify-content: right;
+    margin-left: 3.5%;
+    font-size: 1rem;
+    color:black;
+    text-decoration: underline;
+}
+
+.variable_nationality {
+
+    margin-bottom: 2.8%;
+    margin-top: 2.2%;
+    flex: 2;
+    width: 35%;
+    text-align:left;
+    justify-content: left;
+    margin-left: 2%;
+    font-size: 1.2rem; 
+}
+
+.intro-hidden {
+
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.about_hidden_full {
+
+    margin-bottom:0;
+    margin-top: 3%;
+    flex: 1;
+    width: 17.5%;
+    text-align:right;
+    justify-content: right;
+    margin-left: 3.5%;
+    font-size: 1rem;
+    color:black;
+    text-decoration: underline;
+
+}
+
+.variable_intro {
+
+    margin-bottom: 2.8%;
+    margin-top: 0%;
+    flex: 2;
+    width: 70%;
+    text-align:left;
+    justify-content: left;
+    margin-left: 2%;
+    font-size: 1.2rem; 
+    float: right;
+    margin-left: 22%
+}
+
+
+
+/* BIO FORM */
+
+.bio-form {
+
+    background-color: rgb(240,242,245);
+    border-radius:1rem;
+    border: 1px solid rgb(240,242,245);
+    margin: 1%;
+    padding-left: 10px;
+        
+}
+
+#my-bio {
+
+    min-height: 80px;
+}
+
+.bio-submit {
+
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width:55%;
+    height: 60px;
+    background: rgb(66,183,43);
+    border-color: none;
+    border-style: none;
+    border-radius: 6px;
+    color: white;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    outline:none;
+    font-size: 1.2rem;
+
+}
+
+input, .bio-submit:hover {
+    background-color: rgb(51, 141, 21) ;
+}
+
+.flex-parent-1 {
+
+    display:flex;
+    flex-direction: row;
+    width: 100%;
+
+}
+
+#full-name-bio-label {
+
+    flex: 1;
+    width: 50%;
+    margin-left: 10%;
+    padding-top: 8px;
+    float:right;
+    text-align: right; 
+    justify-content:right;
+    align-items: right;
+} 
+
+#full-name-bio {
+
+    width: auto;
+    margin-right: 10%;
+    
+}
+
+.bio-form:hover {
+
+    border-color: #719ECE;
+    box-shadow: 0 0 10px #719ECE;
+}
+
+/* Firefox */
+input#mobile-bio[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+
+
 
 /* circular icon  */
 #user-avatar-nav {
@@ -1048,12 +1342,6 @@ input.comment-submit {
 
 /* end of circular icon */
 
-
-.bio-h1 {
-
-    margin-bottom: 10%;
-    margin-top: 3%
-}
 
 .line-seperate-feed {
 

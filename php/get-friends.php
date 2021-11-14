@@ -6,8 +6,9 @@ require ('../includes/db-login.php');
 $session_user = $_SESSION['user_name'];
 $substring = $_REQUEST['input_chars'];
 
+
 // find users
-$sql = "SELECT userName FROM users WHERE userName LIKE '%$substring%' LIMIT 0,5";
+$sql = "SELECT userName, fullName FROM users WHERE userName LIKE '%$substring%' LIMIT 0,5";
 
 $result = mysqli_query($conn, $sql);
 

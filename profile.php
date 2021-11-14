@@ -6,8 +6,8 @@ require_once('includes/secure-login.php');
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>FriendZone Registration Page</title>
-    <meta name="description" content="registration-page">
+    <title>FriendZone Profile Page</title>
+    <meta name="description" content="profile-page">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css" type="text/css">
@@ -26,14 +26,14 @@ require_once('includes/secure-login.php');
                 <div class="container nav nav-registration homepage-nav">
                     <div class='row justify-content-center no-gutters title-row title-registration-row nav-homepage-row w-100'>
                         <div class ='col-xs-2 col-sm-2 col-md-2 col-lg-2 title-col title-registration-col homepage-col homepage-col-search'><form><img class='search-nav-icon' src='img/search.png'><input id='search-bar-nav' type='text' placeholder ='Search users' ></form><ul id='user-friends'></ul></div>
-                        <div class ='col-xs-2 col-sm-2 col-md-2 col-lg-2 title-col title-registration-col homepage-col homepage-col-welcome'><h4 class='personalised-welcome-msg'>Hello <?php echo(explode(' ', trim($_SESSION['name'])))[0]?></h4></div>
+                        <div class ='col-xs-2 col-sm-2 col-md-2 col-lg-2 title-col title-registration-col homepage-col homepage-col-welcome'><h4 class='personalised-welcome-msg'>Hello <?php echo($_GET['name'])?></h4></div>
                         <div class ='col-xs-4 col-sm-4 col-md-4 col-lg-4 title-col title-registration-col homepage-col homepage-col-logo'>
-                            <?php if ($_SESSION['user_name'] == 'McNugget') { ?>
-                               <a href='home.php' id = 'user-avatar-nav-img' class='login-link registration-login-link'><img src='img/ric.jpeg' alt='Friendzone logo' class='logo-pic-profile-nav' ></a> <?php ;}
-                               else {?> 
-                               <a href='home.php' id = 'user-avatar-nav-img' class='login-link registration-login-link'><img src='img/logo.png' alt='Friendzone logo' class='logo-pic-profile-nav' ></a> <?php ;}?>
+                            <?php if ($_GET['username'] == 'McNugget') { ?>
+                            <a href='home.php' id = 'user-avatar-nav-img' class='login-link registration-login-link'><img src='img/ric.jpeg' alt='Friendzone logo' class='logo-pic-profile-nav' ></a> <?php }
+                                else {?> 
+                            <a href='home.php' id = 'user-avatar-nav-img' class='login-link registration-login-link'><img src='img/logo.png' alt='Friendzone logo' class='logo-pic-profile-nav' ></a> <?php }?>
                         </div>
-                        <div class ='col-xs-2 col-sm-2 col-md-2 col-lg-2 title-col title-registration-col homepage-col homepage-col-profile-link'><h4 class='profile-link'><a href='profile.php?username=<?php echo($_SESSION['user_name']) ?>'>Profile</a></h4></div>
+                        <div class ='col-xs-2 col-sm-2 col-md-2 col-lg-2 title-col title-registration-col homepage-col homepage-col-profile-link'><h4 class='profile-link'><a href='profile.php?username=<?php echo($_SESSION['user_name'])?>&name=<?php echo(explode(' ', trim($_SESSION['name']))[0])?>'>Profile</a></h4></div>
                         <div class ='col-xs-2 col-sm-2 col-md-2 col-lg-2 title-col title-registration-col homepage-col homepage-col-signout-link'><h4 class='signout-link'><a href='includes/logout.php'>Sign Out</a></h4></div>
                     </div>
                     <hr class='top-horizontal-nav'>
@@ -47,16 +47,28 @@ require_once('includes/secure-login.php');
                             <h4 class='add-bio'><a href='add-bio.php'> add </a></h4>
                             <h4 class='edit-bio'><a href='edit0bio.php'> edit </a></h4>
                         </div>      
-                        <div class='bio-empty-div'>
-                        </div> 
                     </div>
-                </div>  
-                <hr class='line-seperate-feed'>
-                <div class='row justify-content-center no-gutters feed-row'>
-                    <div class ='col-xs-12 col-sm-12 col-md-10 col-lg-10 feed-col'>
-                        <h1 class='feed-h1'> My Posts </h1>
-                        <div class='table-feed'></div>
-                                    <!-- insert all user feed here with ajax response-->
+                </div>
+                <div class='row justify-content-center no-gutters registration-row'>
+                    <div class ='col-xs-12 col-sm-12 col-md-10 col-lg-10 registration-col'>
+                        <form id='post-article-feed' name= 'post-article' class='registration-submit-form feed' method="post" autocomplete="off" required="true">
+                            <h1 class='signup-text article-header'>  </h1>
+                                <textarea id='myThoughts' onkeyup="$(this).height(5);$(this).height($(this).prop('scrollHeight'))" form='post-article' placeholder="What's on your mind, <?php echo explode(' ', $_GET['name'])[0]?>?" maxlength='300' minlength='1' ></textarea>
+                                <hr class='horizontal-line horizontal-line-post'>
+                            </div>
+                            <div class="form-register registration-group signup post-article-button" id='post-button-div' >
+                                <input class='register-button singup post-button' type="submit" name="post" value="Post">
+                                <!-- send to database and insert ajax response  -->
+                            </div>
+                        </form>
+                    </div>
+                <div id = 'feed-row' class='row justify-content-center no-gutters feed-rows'>
+                    <div class ='col-xs-12 col-sm-12 col-md-10 col-lg-10 registration-col feed-col'>
+                        <!-- <h1 class='signup-text article-header'> Feed </h1>     -->
+                        <div class='feed-contents'>
+                            
+                                 <!-- insert all user feed here with ajax response-->
+                        </div>
                     </div>
                 </div>
             </main>

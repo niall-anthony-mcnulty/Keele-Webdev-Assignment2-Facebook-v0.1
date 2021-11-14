@@ -6,8 +6,8 @@ require_once('includes/secure-login.php');
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>FriendZone Registration Page</title>
-    <meta name="description" content="registration-page">
+    <title>FriendZone Home Page</title>
+    <meta name="description" content="home-page">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css" type="text/css">
@@ -30,7 +30,7 @@ require_once('includes/secure-login.php');
                         <div class ='col-xs-4 col-sm-4 col-md-4 col-lg-4 title-col title-registration-col homepage-col homepage-col-logo'>
                             <a href='home.php' class='homepage-logo-link'><img src='img/logo.png' alt='Friendzone logo' class='logo-pic homepage-logo' id='registration-pic'></a>
                         </div>
-                        <div class ='col-xs-2 col-sm-2 col-md-2 col-lg-2 title-col title-registration-col homepage-col homepage-col-profile-link'><h4 class='profile-link'><a href='profile.php?username=<?php echo($_SESSION['user_name']) ?>'>Profile</a></h4></div>
+                        <div class ='col-xs-2 col-sm-2 col-md-2 col-lg-2 title-col title-registration-col homepage-col homepage-col-profile-link'><h4 class='profile-link'><a href='profile.php?username=<?php echo($_SESSION['user_name']) ?>&name=<?php echo(explode(' ', trim($_SESSION['name']))[0])?>'>Profile</a></h4></div>
                         <div class ='col-xs-2 col-sm-2 col-md-2 col-lg-2 title-col title-registration-col homepage-col homepage-col-signout-link'><h4 class='signout-link'><a href='includes/logout.php'>Sign Out</a></h4></div>
                     </div>
                     <hr class='top-horizontal-nav'>
@@ -52,10 +52,9 @@ require_once('includes/secure-login.php');
                     </div>
                 <div id = 'feed-row' class='row justify-content-center no-gutters feed-rows'>
                     <div class ='col-xs-12 col-sm-12 col-md-10 col-lg-10 registration-col feed-col'>
-                        <!-- <h1 class='signup-text article-header'> Feed </h1>     -->
+                        <!-- <h1 class='signup-text article-header'> Feed </h1>  -->
                         <div class='feed-contents'>
-                            
-                                 <!-- insert all user feed here with ajax response-->
+                        <!-- insert all user feed here with ajax response-->
                         </div>
                     </div>
                 </div> 

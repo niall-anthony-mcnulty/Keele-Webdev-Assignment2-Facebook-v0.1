@@ -360,11 +360,9 @@ $(document).on('keyup', '#search-bar-nav' ,function(e) {
             $('#user-friends').empty();
             console.log(output);
             for (var i=0; i<(Object.keys(output).length); i++) {
-                var post_user = output[i]['userName'];
-                console.log(post_user);
-                
-                var list_names = ("<li class='user-names-list' ><a href='profile.php?username=" + post_user + "' class='user-names-list-link'>" + post_user + "</a></li><hr class='search-line'>");
-                console.log(list_names);
+                var search_user = output[i]['userName'];
+                var search_user_fullName = output[i]['fullName'];
+                var list_names = ("<li class='user-names-list' ><a href='profile.php?username=" + search_user + "&name=" + search_user_fullName.split(' ')[0] + "' class='user-names-list-link'>" + search_user + "</a></li><hr class='search-line'>");
                 $('#user-friends').append(list_names);
 
             };

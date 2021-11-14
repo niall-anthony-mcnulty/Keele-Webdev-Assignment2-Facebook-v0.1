@@ -13,12 +13,6 @@ $nationality = $_REQUEST['nationality'];
 
 
 
-// paramterise 
-$stmt = $conn->prepare("INSERT INTO bio (userName, mobileNumber, userSex, fullName, userNationality) VALUES (?,?,?,?,?)");
-$stmt->bind_param('sssss', $session_user, $mobile_no, $radio_value, $full_name, $nationality );
-$stmt->execute();
-
-
 // send back to comments to feed
 $sql = "SELECT userName, mobileNumber, userSex, fullName, userNationality FROM bio WHERE userName = '$session_user'";
 
@@ -28,11 +22,44 @@ $output = array();
 while($data = mysqli_fetch_assoc($result)) {
 
     $output[] = $data;
-
 };
 
-echo json_encode($output);
+if (!$output) {
 
-// echo json_encode(array('user'=>$session_user));
+        // paramterise 
+    $stmt = $conn->prepare("INSERT INTO bio (userName, mobileNumber, userSex, fullName, userNationality) VALUES (?,?,?,?,?)");
+    $stmt->bind_param('sssss', $session_user, $mobile_no, $radio_value, $full_name, $nationality );
+    $stmt->execute();
+
+    $sql = "SELECT userName, mobileNumber, userSex, fullName, userNationality FROM bio WHERE userName = '$session_user'";
+
+    $result = mysqli_query($conn, $sql);
+
+    $output = array();
+    while($data = mysqli_fetch_assoc($result)) {
+
+        $output[] = $data;
+    };
+
+    echo json_encode($output); 
+
+}else {
+
+    $sql = "UPDATE bio SET userName='$session_user', mobileNumber='$mobile_no', userSex='$radio_value', fullName='$full_name', userNationality='$nationality'  WHERE userName = '$session_user'";
+    $result = mysqli_query($conn, $sql);
+
+    $sql = "SELECT userName, mobileNumber, userSex, fullName, userNationality FROM bio WHERE userName = '$session_user'";
+
+    $result = mysqli_query($conn, $sql);
+
+    $output = array();
+    while($data = mysqli_fetch_assoc($result)) {
+
+        $output[] = $data;
+    };
+
+        echo json_encode($output);
+
+}
 
 ?>

@@ -26,7 +26,7 @@ require_once('includes/secure-login.php');
                 <div class="container nav nav-registration homepage-nav">
                     <div class='row justify-content-center no-gutters title-row title-registration-row nav-homepage-row w-100'>
                         <div class ='col-xs-2 col-sm-2 col-md-2 col-lg-2 title-col title-registration-col homepage-col homepage-col-search'><form><img class='search-nav-icon' src='img/search.png'><input id='search-bar-nav' type='text' placeholder ='Search users' ></form><ul id='user-friends'></ul></div>
-                        <div class ='col-xs-2 col-sm-2 col-md-2 col-lg-2 title-col title-registration-col homepage-col homepage-col-welcome'><h4 class='personalised-welcome-msg'>Hello <?php echo($_GET['name'])?></h4></div>
+                        <div class ='col-xs-2 col-sm-2 col-md-2 col-lg-2 title-col title-registration-col homepage-col homepage-col-welcome'><h4 class='personalised-welcome-msg'><?php echo(explode(' ', trim($_GET['name']))[0])?>'s page</h4></div>
                         <div class ='col-xs-4 col-sm-4 col-md-4 col-lg-4 title-col title-registration-col homepage-col homepage-col-logo'>
                             <?php if ($_GET['username'] == 'McNugget') { ?>
                             <a href='home.php' id = 'user-avatar-nav-img' class='login-link registration-login-link'><img src='img/ric.jpeg' alt='Friendzone logo' class='logo-pic-profile-nav' ></a> <?php }
@@ -46,7 +46,7 @@ require_once('includes/secure-login.php');
                             <div class='intro-form'>
                                 <div class='edit-header-container'>
                                     <h1 class='bio-h1'> Intro</h1>
-                                    <div class='bio-edit'><button id='edit-bio-button' class='edit-bio-link' type='button'>Edit</button></div>
+                                    <?php if($_GET['username'] === $_SESSION['user_name']){?><div class='bio-edit'><button id='edit-bio-button' class='edit-bio-link' type='button'>Edit</button></div><?php }?>
                                 </div>
                                 <div class ='hidden-container' id='hidden-container-intro'>
                                  <!-- form or bio appended here -->
@@ -69,7 +69,7 @@ require_once('includes/secure-login.php');
                             </div>
                         </form>
                     </div><?php } else {
-                        
+                    
                     } ?>
                 <div id = 'feed-row' class='row justify-content-center no-gutters feed-rows'>
                     <div class ='col-xs-12 col-sm-12 col-md-10 col-lg-10 registration-col feed-col'>

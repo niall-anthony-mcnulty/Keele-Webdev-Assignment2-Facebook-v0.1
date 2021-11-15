@@ -453,27 +453,51 @@ $(document).on('click', '.bio-submit' ,function(e) {
 // LOAD BIO ON PAGELOAD OR FORM IF NO BIO//
 $(document).ready(function() {
 
+    function get_query(){
+        var url = document.location.href;
+        var qs = url.substring(url.indexOf('?') + 1).split('&');
+        for(var i = 0, result = {}; i < qs.length; i++){
+            qs[i] = qs[i].split('=');
+            result[qs[i][0]] = decodeURIComponent(qs[i][1]);
+        }
+        return result;
+        }
+
+    var url_vars = get_query();
+    var user_name_profile = url_vars['username'];
+
     $.ajax({
         method: "POST",
         url: 'php/get-bio.php',
         dataType: 'json',
+        data: {'user-profile':user_name_profile},
     }).done((output) => {
-        if (output != '') {
-            
+        console.log(output);
+        var profile_user = output['profile-user'];
+        var session_user = output['session-user'];
+        if ('0' in output) {
             var full_name = output[0]['fullName'];
             var mobile_no = output[0]['mobileNumber'];
             var radio_value = output[0]['userSex'];
             var nationality = output[0]['userNationality'];
+
+
             append_intro_info = ("<div class='intro-information-container'><div class='full-name-hidden'><div class='name-hidden-full'>Full Name: </div><div class='variable-fullname'>" + full_name + "</div></div><div class='mobile-hidden'><div class='mobile-hidden-full'>Mobile: </div><div class='variable_mobile'>" + mobile_no + "</div></div><div class='sex-hidden'><div class='sex_hidden_full'>Sex: </div><div class='variable_radio'>" + radio_value + "</div></div><div class='nationality-hidden'><div class='nationality_hidden_full'>Nationality: </div><div class='variable_nationality'>"+ nationality +"</div></div>");
             $('#hidden-container-intro').append(append_intro_info);
            
         } else {
 
-            append_bio_form = ("<form class='intro-form-profile'><div class='flex-parent-1'><label class = 'bio-form-labels' id='full-name-bio-label' for='full-name-bio'> What's your full name? </label><input class = 'bio-form' type='text' id='full-name-bio' name='full-name-bio' required></div><div class='flex-parent-2'><label class = 'bio-form-labels' for='mobile-bio'> What's your mobile number? </label><input class = 'bio-form' type='number' id='mobile-bio' name='mobile-bio' pattern='^[0-9]*$'></div><div class='flex-parent-3'><label class = 'bio-form-labels' for='sex-male'> Male </label><input class = 'bio-form male' type='radio' id='sex-male' name='sex-bio' value='Male' required><label class = 'bio-form-labels' for='sex-female'> Female </label><input class = 'bio-form female' type='radio' id='sex-female' name='sex-bio' value='Female'><label class = 'bio-form-labels' for='sex-other'> Other </label><input class = 'bio-form other' type='radio' id='sex-other' name='sex-bio' value='Other'></div><div class='flex-parent-4'><label class = 'bio-form-labels' for='country-bio'> What's your nationality? </label><input class = 'bio-form' type='country' id='country-bio' name='country-bio' required></div><input class = 'bio-submit' type ='submit' value='Send'></form>")
-            $('#hidden-container-intro').append(append_bio_form);
-            $("#edit-bio-button").hide();
+            if (profile_user === session_user) {
 
-        }
+                append_bio_form = ("<form class='intro-form-profile'><div class='flex-parent-1'><label class = 'bio-form-labels' id='full-name-bio-label' for='full-name-bio'> What's your full name? </label><input class = 'bio-form' type='text' id='full-name-bio' name='full-name-bio' required></div><div class='flex-parent-2'><label class = 'bio-form-labels' for='mobile-bio'> What's your mobile number? </label><input class = 'bio-form' type='number' id='mobile-bio' name='mobile-bio' pattern='^[0-9]*$'></div><div class='flex-parent-3'><label class = 'bio-form-labels' for='sex-male'> Male </label><input class = 'bio-form male' type='radio' id='sex-male' name='sex-bio' value='Male' required><label class = 'bio-form-labels' for='sex-female'> Female </label><input class = 'bio-form female' type='radio' id='sex-female' name='sex-bio' value='Female'><label class = 'bio-form-labels' for='sex-other'> Other </label><input class = 'bio-form other' type='radio' id='sex-other' name='sex-bio' value='Other'></div><div class='flex-parent-4'><label class = 'bio-form-labels' for='country-bio'> What's your nationality? </label><input class = 'bio-form' type='country' id='country-bio' name='country-bio' required></div><input class = 'bio-submit' type ='submit' value='Send'></form>")
+                $('#hidden-container-intro').append(append_bio_form);
+                $("#edit-bio-button").hide();
+            } else {
+
+                    $('#hidden-container-intro').hide();
+                    $('.registration-row').hide();
+            }
+        };
     });
 
 });

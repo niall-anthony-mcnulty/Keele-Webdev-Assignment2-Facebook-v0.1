@@ -6,13 +6,14 @@ require ('../includes/db-login.php');
 
 
 $session_user = $_SESSION['user_name'];
+$profile_user = $_REQUEST['user-profile'];
 
 // send back bio
-$sql = "SELECT userName, mobileNumber, userSex, fullName, userNationality FROM bio WHERE userName = '$session_user'";
+$sql = "SELECT userName, mobileNumber, userSex, fullName, userNationality FROM bio WHERE userName = '$profile_user'";
 
 $result = mysqli_query($conn, $sql);
 
-$output = array();
+$output = array('session-user' => $session_user, 'profile-user'=> $profile_user);
 while($data = mysqli_fetch_assoc($result)) {
 
     $output[] = $data;

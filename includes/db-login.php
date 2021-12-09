@@ -8,8 +8,8 @@ $cleardb_username = 'b260447ff86cf8';
 $cleardb_password = 'a61f5c66';
 $cleardb_db       = 'heroku_702d464ce46caa4';
 
-$active_group = 'default';
-$query_builder = TRUE;
+// $active_group = 'default';
+// $query_builder = TRUE;
 
 // $hn = '127.0.0.1';
 // $un = 'staff';

@@ -3,7 +3,7 @@
 //Get Heroku ClearDB connection information
 
 
-$cleardb_server   = 'eu-cdbr-west-01.cleardb.com';
+$cleardb_server   = 'eu-cdbr-west-01.cleardb.com (b260447ff86cf8)';
 $cleardb_username = 'b260447ff86cf8';
 $cleardb_password = 'a61f5c66';
 $cleardb_db       = 'heroku_702d464ce46caa4';

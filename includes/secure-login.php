@@ -14,9 +14,20 @@ function getIpAddress() {
       }
   };
 
+
+function debug_to_console($data, $content = 'Debug in Console') {
+
+      $output = 'console.info(\''. $conent . ':\');';
+      $output .= 'console.log('. json_encode($data) . ');';
+      $output = sprintf('<script>%s</script>', $output);
+
+      echo $output;
+
+} ;
+
 if ($_SESSION['id'] != session_id() || !isset($_SESSION['loggedin']) || !$_SESSION['loggedin'] || $_SESSION['ip'] != getIpAddress() || ((time() - $_SESSION['loggin_time']) > 3600)) {     
-      echo $_SESSION['ip'];
-      echo getIpAddress();
+      $data = ['ip'=>getIpAddress(), 'session_ip'=>$_SESSION['ip']];
+      debug_to_console($data);
       session_destroy();
       header("Location: ../index.php");
       exit;

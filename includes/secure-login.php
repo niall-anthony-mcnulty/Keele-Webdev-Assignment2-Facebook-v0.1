@@ -15,6 +15,8 @@ function getIpAddress() {
   };
 
 if ($_SESSION['id'] != session_id() || !isset($_SESSION['loggedin']) || !$_SESSION['loggedin'] || $_SESSION['ip'] != getIpAddress() || ((time() - $_SESSION['loggin_time']) > 3600)) {     
+      echo $_SESSION['ip'];
+      echo getIpAddress();
       session_destroy();
       header("Location: ../index.php");
       exit;

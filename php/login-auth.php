@@ -2,7 +2,15 @@
 
 require '../includes/db-login.php';
 
-
+function getIpAddress() {
+    if (isset($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+        $ipAddresses = explode(',', $_SERVER['HTTP_X_FORWARDED_FOR']);
+        return trim(end($ipAddresses));
+    }
+    else {
+        return $_SERVER['REMOTE_ADDR'];
+    }
+};
 
 if ((isset($_POST['email'])) && (isset($_POST['password']))) {
     
@@ -34,7 +42,7 @@ if ((isset($_POST['email'])) && (isset($_POST['password']))) {
             $_SESSION['type'] = $row[4]; 
             $_SESSION['loggedin'] = true;
             $_SESSION['id'] = session_id();
-            $_SESSION['ip'] = $_SERVER['REMOTE_ADDR'];
+            $_SESSION['ip'] = getIpAddress();
             $_SESSION['loggin_time'] = time();            
 
             echo 'confirmed';

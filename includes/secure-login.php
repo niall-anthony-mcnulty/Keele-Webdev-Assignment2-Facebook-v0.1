@@ -15,13 +15,9 @@ function getIpAddress() {
   };
 
 
-function debug_to_console($data, $content = 'Debug in Console') {
+function debug_to_console($data) {
 
-      $output = 'console.info(\''. $content . ':\');';
-      $output .= 'console.log('. json_encode($data) . ');';
-      $output = sprintf('<script>%s</script>', $output);
-
-      echo $output;
+      echo "<script>console.log('".$data."');</script>";
 
 } ;
 
